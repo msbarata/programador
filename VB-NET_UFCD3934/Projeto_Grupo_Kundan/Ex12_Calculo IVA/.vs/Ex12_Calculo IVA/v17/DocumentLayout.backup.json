@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9AF153-80AD-4C84-A547-AE9900751F2A}|Ex12_Calculo IVA\\Ex12_Calculo IVA.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\projeto_grupo_kundan\\ex12_calculo iva\\ex12_calculo iva\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{BC9AF153-80AD-4C84-A547-AE9900751F2A}|Ex12_Calculo IVA\\Ex12_Calculo IVA.vbproj|solutionrelative:ex12_calculo iva\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9AF153-80AD-4C84-A547-AE9900751F2A}|Ex12_Calculo IVA\\Ex12_Calculo IVA.vbproj|C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\ex12_calculo iva\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{BC9AF153-80AD-4C84-A547-AE9900751F2A}|Ex12_Calculo IVA\\Ex12_Calculo IVA.vbproj|solutionrelative:ex12_calculo iva\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\Ex12_Calculo IVA\\Form1.vb",
+              "RelativeDocumentMoniker": "Ex12_Calculo IVA\\Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\Ex12_Calculo IVA\\Form1.vb",
+              "RelativeToolTip": "Ex12_Calculo IVA\\Form1.vb",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-14T17:46:01.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\Ex12_Calculo IVA\\Form1.vb",
+              "RelativeDocumentMoniker": "Ex12_Calculo IVA\\Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Projeto_Grupo_Kundan\\Ex12_Calculo IVA\\Ex12_Calculo IVA\\Form1.vb [Design]",
+              "RelativeToolTip": "Ex12_Calculo IVA\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-14T17:42:08.41Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

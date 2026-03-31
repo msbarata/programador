@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\bin\Debug\ExIVA.exe.config
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\bin\Debug\ExIVA.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\bin\Debug\ExIVA.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\bin\Debug\ExIVA.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.vbproj.AssemblyReference.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.Form1.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.Resources.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\ExIVA\obj\Debug\ExIVA.exe.config

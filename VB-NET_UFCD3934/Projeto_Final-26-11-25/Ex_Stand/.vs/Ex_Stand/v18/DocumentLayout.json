@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_ufcd3934\\projeto_final-26-11-25\\ex_stand\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\standdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|solutionrelative:standdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Ex_Stand||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/Stand/True/SqlTable/dbo.Stand.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{456BCBB8-F3D0-4C77-AC03-A24760A9A214}|Ex_Stand.vbproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 153,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dbo.Stand.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/Stand/True/SqlTable/dbo.Stand.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/localhost/Stand/True/SqlTable/dbo.Stand.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-27T01:11:14.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T23:05:23.428Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StandDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\StandDataSet.xsd",
+              "RelativeDocumentMoniker": "StandDataSet.xsd",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\StandDataSet.xsd",
+              "RelativeToolTip": "StandDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-11-27T15:01:43.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ex_Stand",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Ex_Stand.vbproj",
+              "RelativeDocumentMoniker": "Ex_Stand.vbproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Ex_Stand.vbproj",
+              "RelativeToolTip": "Ex_Stand.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-27T02:14:10.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-27T01:12:30.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_UFCD3934\\Projeto_Final-26-11-25\\Ex_Stand\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T23:06:20.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

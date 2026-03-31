@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\bin\Debug\LojaLivros.accdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\bin\Debug\ExBibloteca25481.exe.config
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\bin\Debug\ExBibloteca25481.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\bin\Debug\ExBibloteca25481.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\bin\Debug\ExBibloteca25481.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.vbproj.AssemblyReference.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.Form1.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.Resources.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Atividade18_11-25\ExBibloteca25481\ExBibloteca25481\obj\Debug\ExBibloteca25481.exe.config

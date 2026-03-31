@@ -1,0 +1,2 @@
+SELECT * FROM Reserva WHERE Dia_Saida IS NULL;
+SELECT * FROM Reserva WHERE Dia_Saida IS NOT NULL;

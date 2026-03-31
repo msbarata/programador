@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\BancoFinanceiro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68113307-2257-4D46-9D4D-E4B7E4259005}|BancoFinanceiro.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\bancofinanceiro\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{68113307-2257-4D46-9D4D-E4B7E4259005}|BancoFinanceiro.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68113307-2257-4D46-9D4D-E4B7E4259005}|BancoFinanceiro.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\bancofinanceiro\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68113307-2257-4D46-9D4D-E4B7E4259005}|BancoFinanceiro.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\BancoFinanceiro\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\BancoFinanceiro\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-27T19:35:46.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\BancoFinanceiro\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\BancoFinanceiro\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-27T19:10:36.802Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

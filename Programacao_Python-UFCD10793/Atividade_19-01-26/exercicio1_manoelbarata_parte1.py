@@ -1,0 +1,1 @@
+print ("Python is interesting because it is easy to learn and read. It is widely used in many fields like web development, data science, and AI. Python also has many libraries that make work faster and simpler.")

@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\bin\Debug\Exercicio-6.exe.config
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\bin\Debug\Exercicio-6.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\bin\Debug\Exercicio-6.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\bin\Debug\Exercicio-6.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.vbproj.AssemblyReference.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio_6.Form1.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio_6.Resources.resources
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.exe
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.xml
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.pdb
+C:\Users\User\Desktop\Manoel\Programação_Disciplinas_IEFP\VB-NET_3934\Exercicio-6\obj\Debug\Exercicio-6.exe.config

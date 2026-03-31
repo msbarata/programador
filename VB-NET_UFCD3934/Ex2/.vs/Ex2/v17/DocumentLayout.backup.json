@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Ex2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{964F8CF0-D52C-4998-8907-CB42EA40F5D1}|Ex2.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\ex2\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{964F8CF0-D52C-4998-8907-CB42EA40F5D1}|Ex2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964F8CF0-D52C-4998-8907-CB42EA40F5D1}|Ex2.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\ex2\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{964F8CF0-D52C-4998-8907-CB42EA40F5D1}|Ex2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Ex2\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Ex2\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-17T15:20:25.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Ex2\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Ex2\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-17T15:16:27.591Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

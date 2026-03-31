@@ -1,0 +1,2 @@
+SELECT * FROM (SELECT Sigla_Hotel, Numero_Quarto, Preco, RANK() OVER (PARTITION BY Sigla_Hotel ORDER BY Preco ASC) as "ranking" FROM Quarto) as tb1
+WHERE ranking = 1 ORDER BY Sigla_Hotel, Numero_Quarto ASC;

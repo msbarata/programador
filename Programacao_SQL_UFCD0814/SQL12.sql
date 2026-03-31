@@ -1,0 +1,4 @@
+SELECT Preco
+FROM Quarto
+ORDER BY Sigla_Hotel="SH" DESC
+LIMIT 1;

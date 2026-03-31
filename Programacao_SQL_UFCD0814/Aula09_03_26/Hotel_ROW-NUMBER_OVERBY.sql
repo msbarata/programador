@@ -1,0 +1,1 @@
+SELECT Sigla_Hotel, Numero_Quarto, Preco, ROW_NUMBER() OVER (ORDER BY Preco ASC) FROM Quarto

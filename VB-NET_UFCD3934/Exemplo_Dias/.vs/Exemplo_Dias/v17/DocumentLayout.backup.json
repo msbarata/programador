@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Exemplo_Dias\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E80A021-D527-4DD8-8A2E-B08366AD77C4}|Exemplo_Dias.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\exemplo_dias\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{2E80A021-D527-4DD8-8A2E-B08366AD77C4}|Exemplo_Dias.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E80A021-D527-4DD8-8A2E-B08366AD77C4}|Exemplo_Dias.vbproj|c:\\users\\user\\desktop\\manoel\\programa\u00E7\u00E3o_disciplinas_iefp\\vb-net_3934\\exemplo_dias\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E80A021-D527-4DD8-8A2E-B08366AD77C4}|Exemplo_Dias.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Exemplo_Dias\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Exemplo_Dias\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-21T14:15:43.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Exemplo_Dias\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Manoel\\Programa\u00E7\u00E3o_Disciplinas_IEFP\\VB-NET_3934\\Exemplo_Dias\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-21T13:22:31.763Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

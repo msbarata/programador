@@ -1,0 +1,1 @@
+SELECT Sigla_Hotel, Numero_Quarto, Preco, AVG(Preco) OVER (PARTITION BY Sigla_Hotel) FROM Quarto;

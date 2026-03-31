@@ -1,0 +1,1 @@
+SELECT * FROM Reserva WHERE Numero_Reserva IN (SELECT Numero_Reserva FROM Factura);

@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03DE79-C784-488D-A53A-4238281D65B1}|ExOrdenado.vbproj|c:\\users\\marco\\source\\repos\\25481\\vb.net\\ex7ordenado\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FE03DE79-C784-488D-A53A-4238281D65B1}|ExOrdenado.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03DE79-C784-488D-A53A-4238281D65B1}|ExOrdenado.vbproj|C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FE03DE79-C784-488D-A53A-4238281D65B1}|ExOrdenado.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-16T17:31:01.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\marco\\source\\repos\\25481\\VB.net\\Ex7Ordenado\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-16T17:27:19.943Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

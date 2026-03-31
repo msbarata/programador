@@ -1,0 +1,1 @@
+SELECT DISTINCT Nome_Cliente FROM Cliente WHERE Numero_Cliente IN (SELECT Numero_Cliente FROM Reserva);

@@ -1,0 +1,25 @@
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\bin\Debug\ExOrdenado.exe.config
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\bin\Debug\ExOrdenado.exe
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\bin\Debug\ExOrdenado.pdb
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\bin\Debug\ExOrdenado.xml
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.vbproj.AssemblyReference.cache
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.Form1.resources
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.Resources.resources
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.vbproj.GenerateResource.cache
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.vbproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.exe
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.xml
+C:\Users\User\source\repos\23328\Ex 4 de Abril\ExOrdenado\obj\Debug\ExOrdenado.pdb
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.vbproj.AssemblyReference.cache
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.exe.config
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.exe
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.xml
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.pdb
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\bin\Debug\ExOrdenado.exe.config
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\bin\Debug\ExOrdenado.exe
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\bin\Debug\ExOrdenado.pdb
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\bin\Debug\ExOrdenado.xml
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.Form1.resources
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.Resources.resources
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.vbproj.GenerateResource.cache
+C:\Users\marco\source\repos\25481\VB.net\Ex7Ordenado\obj\Debug\ExOrdenado.vbproj.CoreCompileInputs.cache

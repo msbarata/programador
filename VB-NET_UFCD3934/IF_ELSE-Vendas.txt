@@ -1,0 +1,25 @@
+   Vendas = TextBox1.Text
+ 
+ 
+        If Vendas < 200 Then
+            MessageBox.Show("Tem de esforçar mais")
+            Label2.Text = ("Tem de se esforçar muito, porque o valor da Venda é: " & Vendas)
+            Label2.ForeColor = Color.Red
+        ElseIf Vendas < 400 Then
+            MessageBox.Show("Pode melhorar")
+            Label2.Text = ("Pode melhorar, porque o valor da Venda é: " & Vendas)
+            Label2.ForeColor = Color.BlueViolet
+        ElseIf Vendas < 600 Then
+            MessageBox.Show("Bom")
+            Label2.Text = ("Bom, porque o valor da Venda é: " & Vendas)
+            Label2.ForeColor = Color.Blue
+        ElseIf Vendas < 800 Then
+            MessageBox.Show("Muito Bom")
+            Label2.Text = ("Muito Bom, porque o valor da Venda é: " & Vendas)
+            Label2.ForeColor = Color.Orange
+        Else
+            MessageBox.Show("Excelente")
+            Label2.Text = ("Excelente - vai ter direito a Férias 5 dias, porque o valor da Venda é: " & Vendas)
+            Label2.ForeColor = Color.Green
+ 
+        End If

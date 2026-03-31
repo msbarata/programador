@@ -1,0 +1,54 @@
+Public Class Form1
+    Dim Salario As Integer
+    Dim desconto As Integer
+    Dim TaxaIva As Integer
+    Dim Saude As Integer
+    Dim SS As Integer
+    Dim salarioFinal As Integer
+ 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Salario = (txtHoras.Text * txtDias.Text) * txtPrecoHoras.Text
+        txtSB.Text = Salario
+ 
+        'Serve para calcular valor de IVA
+        TaxaIva = Salario * 0.23
+        txtIVA.Text = TaxaIva
+ 
+        'Serve para calcular o valor de Saúde
+        Saude = Salario * 0.05
+        txtSaude.Text = Saude
+ 
+        'Serve para calcular o valor de SS
+        SS = Salario * 0.11
+        txtSS.Text = SS
+ 
+        'Calcula descontos
+        desconto = TaxaIva + Saude + SS
+        txtDescontos.Text = desconto
+ 
+        'Serve para Calcular salário final
+        salarioFinal = Salario - desconto
+        TxtOrdenado.Text = salarioFinal
+ 
+ 
+    End Sub
+ 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Limpar campos de entrada
+        txtHoras.Text = ""
+        txtDias.Text = ""
+        txtPrecoHoras.Text = ""
+ 
+        'Limpar campos de resultado
+        txtSB.Text = ""
+        txtIVA.Text = ""
+        txtSaude.Text = ""
+        txtSS.Text = ""
+        txtDescontos.Text = ""
+        TxtOrdenado.Text = ""
+        txtNome.Text = ""
+ 
+        'Colocar o foco no primeiro campo
+        txtNome.Focus()
+ 
+    End Sub

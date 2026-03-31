@@ -1,0 +1,1 @@
+SELECT Sigla_Hotel, Numero_Quarto, Preco, RANK() OVER (ORDER BY Preco ASC)AS Ordem_Preco FROM Quarto

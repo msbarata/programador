@@ -1,0 +1,1 @@
+SELECT Numero_Cliente, Numero_Reserva, Dia_Entrada, Dia_Saida, ROW_NUMBER() OVER (PARTITION BY Numero_Cliente ORDER BY Dia_Entrada) FROM Reserva
