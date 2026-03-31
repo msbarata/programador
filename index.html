@@ -28,7 +28,6 @@
       overflow-x: hidden;
     }
 
-    /* ── BACKGROUND TEXTURE ── */
     body::before {
       content: '';
       position: fixed;
@@ -37,17 +36,13 @@
         radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.07) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 80%, rgba(74,44,24,0.4) 0%, transparent 60%),
         repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 40px,
-          rgba(201,168,76,0.02) 40px,
-          rgba(201,168,76,0.02) 41px
+          45deg, transparent, transparent 40px,
+          rgba(201,168,76,0.02) 40px, rgba(201,168,76,0.02) 41px
         );
       pointer-events: none;
       z-index: 0;
     }
 
-    /* ── HEADER ── */
     header {
       position: relative;
       z-index: 1;
@@ -66,18 +61,28 @@
     }
 
     .ornament-line {
-      height: 1px;
-      width: 80px;
+      height: 1px; width: 80px;
       background: linear-gradient(to right, transparent, var(--gold));
     }
     .ornament-line.right {
       background: linear-gradient(to left, transparent, var(--gold));
     }
-
     .ornament-diamond {
       width: 8px; height: 8px;
       background: var(--gold);
       transform: rotate(45deg);
+    }
+
+    /* ── NOME DO AUTOR ── */
+    .author-name {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      animation: fadeSlideDown 0.85s ease both;
+      text-shadow: 0 0 24px rgba(201,168,76,0.45);
     }
 
     header h1 {
@@ -90,25 +95,37 @@
       animation: fadeSlideDown 1s ease 0.1s both;
     }
 
+    header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin: 28px 0 12px;
+      animation: fadeSlideDown 1s ease 0.15s both;
+    }
+
     header p.subtitle {
       margin-top: 12px;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-style: italic;
       color: var(--cream-dark);
-      opacity: 0.75;
-      letter-spacing: 0.05em;
+      opacity: 0.8;
+      letter-spacing: 0.03em;
+      line-height: 1.75;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
       animation: fadeSlideDown 1s ease 0.2s both;
     }
 
     .gold-rule {
       margin: 28px auto 0;
-      width: 200px;
-      height: 2px;
+      width: 200px; height: 2px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
       animation: fadeSlideDown 1s ease 0.3s both;
     }
 
-    /* ── SEARCH ── */
     .search-wrapper {
       position: relative;
       z-index: 1;
@@ -119,8 +136,7 @@
     }
 
     .search-wrapper input {
-      width: 100%;
-      max-width: 500px;
+      width: 100%; max-width: 500px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(201,168,76,0.35);
       border-radius: 4px;
@@ -137,7 +153,6 @@
       background: rgba(255,255,255,0.07);
     }
 
-    /* ── GRID ── */
     main {
       position: relative;
       z-index: 1;
@@ -149,7 +164,6 @@
       gap: 24px;
     }
 
-    /* ── CARD ── */
     .card {
       background: linear-gradient(135deg, rgba(46,26,14,0.85) 0%, rgba(30,16,7,0.95) 100%);
       border: 1px solid rgba(201,168,76,0.2);
@@ -161,125 +175,84 @@
       animation: cardAppear 0.6s ease both;
       cursor: pointer;
     }
-
     .card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
+      top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.35s ease;
+      opacity: 0; transition: opacity 0.35s ease;
     }
-
     .card::after {
       content: '';
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
+      opacity: 0; transition: opacity 0.35s ease;
       pointer-events: none;
     }
-
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.35);
       border-color: rgba(201,168,76,0.5);
     }
-
-    .card:hover::before,
-    .card:hover::after { opacity: 1; }
+    .card:hover::before, .card:hover::after { opacity: 1; }
 
     .card-badge {
       font-family: 'Cinzel', serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      color: var(--gold);
-      text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.18em;
+      color: var(--gold); text-transform: uppercase;
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; align-items: center; gap: 8px;
     }
-
     .card-badge::before {
       content: '';
       display: inline-block;
       width: 5px; height: 5px;
       background: var(--gold);
-      transform: rotate(45deg);
-      flex-shrink: 0;
+      transform: rotate(45deg); flex-shrink: 0;
     }
 
     .card-code {
       font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
-      color: var(--gold-light);
-      letter-spacing: 0.1em;
-      margin-bottom: 6px;
+      font-size: 0.75rem; color: var(--gold-light);
+      letter-spacing: 0.1em; margin-bottom: 6px;
     }
 
     .card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--cream);
-      line-height: 1.4;
-      margin-bottom: 20px;
+      font-size: 1.15rem; font-weight: 600;
+      color: var(--cream); line-height: 1.4; margin-bottom: 20px;
     }
 
     .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--gold);
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.9rem; font-style: italic;
+      color: var(--gold); text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.25s, color 0.25s;
       letter-spacing: 0.03em;
     }
-
-    .card-link:hover {
-      color: var(--gold-light);
-      border-bottom-color: var(--gold-light);
-    }
-
-    .card-link svg {
-      width: 14px; height: 14px;
-      flex-shrink: 0;
-      transition: transform 0.25s;
-    }
-
+    .card-link:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+    .card-link svg { width: 14px; height: 14px; flex-shrink: 0; transition: transform 0.25s; }
     .card-link:hover svg { transform: translateX(3px); }
 
-    /* ── FOOTER ── */
     footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 28px;
+      position: relative; z-index: 1;
+      text-align: center; padding: 28px;
       border-top: 1px solid rgba(201,168,76,0.15);
       font-size: 0.85rem;
       color: rgba(245,230,184,0.35);
-      font-style: italic;
-      letter-spacing: 0.04em;
+      font-style: italic; letter-spacing: 0.04em;
     }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeSlideDown {
       from { opacity: 0; transform: translateY(-16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes cardAppear {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* staggered card delays */
     main .card:nth-child(1)  { animation-delay: 0.05s; }
     main .card:nth-child(2)  { animation-delay: 0.10s; }
     main .card:nth-child(3)  { animation-delay: 0.15s; }
@@ -302,7 +275,6 @@
     main .card:nth-child(20) { animation-delay: 1.00s; }
     main .card:nth-child(21) { animation-delay: 1.05s; }
 
-    /* hidden by search */
     .card.hidden { display: none; }
 
     @media (max-width: 500px) {
@@ -318,16 +290,23 @@
     <span class="ornament-diamond"></span>
     <span class="ornament-line right"></span>
   </div>
-  <h1>E-Portfólio - Formação em Programação</h1> <br><br>
-   <h2>Currículo Resumido</h2>
-    <p class="subtitle"> Em Portugal - Formação: Equivalência do 12. Ano; curso, tendências e análises de mercado, Centro de Emprego e Formação Profissional de Évora, 2025; Técnico em Programação (nível 4), Centro de Emprego e Formação Profissional de Alcoitão, 2026. 
-<br><br> No Brasil - Formação: Graduação em Biblioteconomia e Documentação pela Universidade Federal Fluminense (2000); Especialização em Gestão Empreendedora nas Organizações pelo Centro Universitário Augusto Mota (2008); Mestrado em Biblioteconomia pelo PPGB - Universidade Federal do Estado do Rio de Janeiro (2013-2015); Especialização em Inovação e Tecnologias na Educação - Universidade Tecnológica Federal do Paraná (2018 - 2019).
-Experiência Profissional: Atuação desde 1999, como auxiliar em escritórios de contabilidade e jurídico; trabalhou a partir de 2003, como Bibliotecário na Universidade do Estado do Rio de Janeiro, participando em diversos grupos de trabalho, coordenando a Biblioteca Jurídica (CCS/C), desenvolvendo e ministrando Curso em Fontes de Informação Jurídica pela Faculdade de Direito da UERJ; posteriormente, passou a trabalhar a partir de 2012
-como Bibliotecário na Fundação Oswaldo Cruz - Rio de Janeiro, na Biblioteca de História das Ciências e da Saúde - COC/FIOCRUZ; por transferência, a partir do ano de 2017, passou a exercer suas atividades laborais no Instituto Carlos Chagas (Fiocruz Paraná), como coordenador do Centro de Memória, Biblioteca, Informação e Documentação, organização e o controle do acervo bibliográfico e documental do Instituto, como gestor de Comunidade do
-Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Conhecimento (NAAC - ICC). Além disso, no decorrer deste período, participou de alguns projetos na área de gestão da informação e no ensino à distância no Brasil.<br><br>
-  
-  <h2>Materiais & Códigos por Disciplina</h2>
-  
+
+  <p class="author-name">Manoel Silva Barata</p>
+
+  <h1>E-Portfólio - Formação em Programação</h1>
+
+  <br><br>
+  <h2>Currículo Resumido</h2>
+  <p class="subtitle">
+    Em Portugal — Formação: Equivalência do 12.º Ano; curso, tendências e análises de mercado, Centro de Emprego e Formação Profissional de Évora, 2025; Técnico em Programação (nível 4), Centro de Emprego e Formação Profissional de Alcoitão, 2026.
+    <br><br>
+    No Brasil — Formação: Graduação em Biblioteconomia e Documentação pela Universidade Federal Fluminense (2000); Especialização em Gestão Empreendedora nas Organizações pelo Centro Universitário Augusto Mota (2008); Mestrado em Biblioteconomia pelo PPGB - Universidade Federal do Estado do Rio de Janeiro (2013-2015); Especialização em Inovação e Tecnologias na Educação - Universidade Tecnológica Federal do Paraná (2018-2019).
+    <br><br>
+    Experiência Profissional: Atuação desde 1999 como auxiliar em escritórios de contabilidade e jurídico; trabalhou a partir de 2003 como Bibliotecário na Universidade do Estado do Rio de Janeiro, participando em diversos grupos de trabalho, coordenando a Biblioteca Jurídica (CCS/C), desenvolvendo e ministrando Curso em Fontes de Informação Jurídica pela Faculdade de Direito da UERJ; posteriormente, passou a trabalhar a partir de 2012 como Bibliotecário na Fundação Oswaldo Cruz - Rio de Janeiro, na Biblioteca de História das Ciências e da Saúde - COC/FIOCRUZ; por transferência, a partir de 2017, passou a exercer suas atividades laborais no Instituto Carlos Chagas (Fiocruz Paraná), como coordenador do Centro de Memória, Biblioteca, Informação e Documentação, organizando e controlando o acervo bibliográfico e documental do Instituto, como gestor de Comunidade do Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Conhecimento (NAAC - ICC). Além disso, participou de projetos na área de gestão da informação e no ensino à distância no Brasil.
+  </p>
+
+  <br><br>
+  <h2>Materiais &amp; Códigos por Disciplina</h2>
   <div class="gold-rule"></div>
 </header>
 
@@ -337,15 +316,11 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
 
 <main id="grid">
 
-  <!-- TEMPLATE DE CARD — duplicado para cada disciplina -->
-  <!-- formato: UFCD XXXX — Nome da Disciplina -->
-
   <div class="card" data-search="vb net ufcd3934">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 3934</div>
     <div class="card-title">VB.NET</div>
-    <a class="card-link" href="VB-NET_UFCD3934/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="VB-NET_UFCD3934/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -354,8 +329,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0798</div>
     <div class="card-title">Utilitários</div>
-    <a class="card-link" href="Utilitarios-UFCD0798/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Utilitarios-UFCD0798/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -364,8 +338,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Utilitário</div>
     <div class="card-code">—</div>
     <div class="card-title">Testa Códigos</div>
-    <a class="card-link" href="TestaCodigos/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="TestaCodigos/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -374,8 +347,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0799</div>
     <div class="card-title">Sistemas de Redes Local</div>
-    <a class="card-link" href="Sistemas_Redes_Local_UFCD0799/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Sistemas_Redes_Local_UFCD0799/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -384,8 +356,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0797</div>
     <div class="card-title">Sistemas Operativos</div>
-    <a class="card-link" href="Sistemas_Operativos_UFCD0797/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Sistemas_Operativos_UFCD0797/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -394,8 +365,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0800</div>
     <div class="card-title">Serviços Adicionais de Redes</div>
-    <a class="card-link" href="Servicos_Adicionais_Redes-UFCD0800/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Servicos_Adicionais_Redes-UFCD0800/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -404,8 +374,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10795</div>
     <div class="card-title">Segurança no Desenvolvimento de Software</div>
-    <a class="card-link" href="Seguranca-Desenvolvimento_Software_UFCD10795/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Seguranca-Desenvolvimento_Software_UFCD10795/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -414,8 +383,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">Power BI</div>
     <div class="card-title">Power BI — António Matias</div>
-    <a class="card-link" href="Prower_BI-Antonio_Matias/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Prower_BI-Antonio_Matias/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -424,8 +392,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10672</div>
     <div class="card-title">Proteção de Dados Pessoais</div>
-    <a class="card-link" href="Protecao_Dados_Pessoais-UFCD10672/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Protecao_Dados_Pessoais-UFCD10672/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -434,8 +401,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10790</div>
     <div class="card-title">Projeto de Programação</div>
-    <a class="card-link" href="Projeto_Programacao_UFCD10790/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Projeto_Programacao_UFCD10790/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -444,8 +410,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0814</div>
     <div class="card-title">Programação SQL</div>
-    <a class="card-link" href="Programacao_SQL_UFCD0814/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_SQL_UFCD0814/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -454,8 +419,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10793</div>
     <div class="card-title">Programação Python</div>
-    <a class="card-link" href="Programacao_Python-UFCD10793/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_Python-UFCD10793/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -464,8 +428,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10794</div>
     <div class="card-title">Programação Python Avançado</div>
-    <a class="card-link" href="Programacao_Python_Avancado-UFCD10794/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_Python_Avancado-UFCD10794/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -474,8 +437,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0816</div>
     <div class="card-title">Programação JAVA</div>
-    <a class="card-link" href="Programacao_JAVA_UFCD0816/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_JAVA_UFCD0816/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -484,8 +446,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0809</div>
     <div class="card-title">Programação C / C++</div>
-    <a class="card-link" href="Programacao_C-C++UFCD0809/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_C-C++UFCD0809/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -494,8 +455,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 3935</div>
     <div class="card-title">Programação C#</div>
-    <a class="card-link" href="Programacao_C#UFCD3935/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_C#UFCD3935/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -504,8 +464,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10792</div>
     <div class="card-title">Programação ASP.NET</div>
-    <a class="card-link" href="Programacao_ASP-NET_UFCD10792/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Programacao_ASP-NET_UFCD10792/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -514,8 +473,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0802</div>
     <div class="card-title">Processamento Computacional</div>
-    <a class="card-link" href="Processamento_Computacional_UFCD0802/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Processamento_Computacional_UFCD0802/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -524,8 +482,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">PRA</div>
     <div class="card-code">PRA</div>
     <div class="card-title">PRA — António Travessa</div>
-    <a class="card-link" href="PRA-Antonio_Travessa/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="PRA-Antonio_Travessa/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -534,8 +491,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 7854</div>
     <div class="card-title">Plano de Negócios</div>
-    <a class="card-link" href="Plano_Negocios_UFCD7854/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Plano_Negocios_UFCD7854/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -544,8 +500,7 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0806</div>
     <div class="card-title">Metodologia de Programação</div>
-    <a class="card-link" href="Metodologia_Programacao_UFCD0806/" target="_blank">
-      Aceder ao repositório
+    <a class="card-link" href="Metodologia_Programacao_UFCD0806/" target="_blank">Aceder ao repositório
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -553,13 +508,12 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
 </main>
 
 <footer>
-  msbarata / programador &nbsp;·&nbsp; Repositório GitHub &nbsp;·&nbsp; Formação Profissional
+  Manoel Silva Barata &nbsp;·&nbsp; msbarata / programador &nbsp;·&nbsp; Repositório GitHub &nbsp;·&nbsp; Formação Profissional
 </footer>
 
 <script>
   const searchInput = document.getElementById('search');
   const cards = document.querySelectorAll('.card');
-
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
     cards.forEach(card => {
@@ -571,3 +525,4 @@ Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Con
 
 </body>
 </html>
+
