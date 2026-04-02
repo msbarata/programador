@@ -4,511 +4,646 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Programador — E-Portfólio de Formação</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Jost:wght@200;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --gold:        #C9A84C;
-      --gold-light:  #E8C97A;
-      --gold-pale:   #F5E6B8;
-      --brown-deep:  #1C0F05;
-      --brown-dark:  #2E1A0E;
-      --brown-mid:   #4A2C18;
-      --brown-warm:  #6B3F22;
-      --cream:       #FAF3E0;
-      --cream-dark:  #EDE0C4;
+      --blue-deep:    #0D2B45;
+      --blue-mid:     #1A4A72;
+      --blue-muted:   #2E6A9E;
+      --blue-soft:    #4A8FBE;
+      --blue-pale:    #C8DFF0;
+      --blue-lightest:#EBF4FA;
+      --gray-dark:    #2D3136;
+      --gray-mid:     #5A6270;
+      --gray-light:   #9AA3AE;
+      --gray-border:  #D5D9DF;
+      --gray-surface: #F2F3F5;
+      --beige-warm:   #F8F4EE;
+      --beige-mid:    #E8E0D0;
+      --beige-accent: #C4A882;
+      --beige-dark:   #9C8468;
+      --white:        #FFFFFF;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      background-color: var(--brown-deep);
-      color: var(--cream);
-      font-family: 'Cormorant Garamond', serif;
+      background-color: var(--beige-warm);
+      color: var(--gray-dark);
+      font-family: 'DM Sans', sans-serif;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
+    /* ── SIDE ACCENT ── */
     body::before {
       content: '';
       position: fixed;
-      inset: 0;
-      background-image:
-        radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.07) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 80%, rgba(74,44,24,0.4) 0%, transparent 60%),
-        repeating-linear-gradient(
-          45deg, transparent, transparent 40px,
-          rgba(201,168,76,0.02) 40px, rgba(201,168,76,0.02) 41px
-        );
-      pointer-events: none;
-      z-index: 0;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--blue-mid), var(--beige-accent), var(--blue-deep));
+      z-index: 10;
     }
 
+    /* ── HEADER ── */
     header {
+      background: var(--blue-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 64px 48px 52px 60px;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 340px; height: 340px;
+      border-radius: 50%;
+      border: 40px solid rgba(74,143,190,0.12);
+      pointer-events: none;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: 120px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      border: 24px solid rgba(196,168,130,0.10);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      max-width: 1060px;
+      margin: 0 auto;
       position: relative;
       z-index: 1;
-      text-align: center;
-      padding: 60px 20px 40px;
-      border-bottom: 1px solid rgba(201,168,76,0.3);
     }
 
-    .header-ornament {
-      display: flex;
+    .author-label {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 20px;
-      animation: fadeSlideDown 0.9s ease both;
-    }
-
-    .ornament-line {
-      height: 1px; width: 80px;
-      background: linear-gradient(to right, transparent, var(--gold));
-    }
-    .ornament-line.right {
-      background: linear-gradient(to left, transparent, var(--gold));
-    }
-    .ornament-diamond {
-      width: 8px; height: 8px;
-      background: var(--gold);
-      transform: rotate(45deg);
-    }
-
-    /* ── NOME DO AUTOR ── */
-    .author-name {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
-      letter-spacing: 0.35em;
-      color: var(--gold);
+      gap: 10px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      margin-bottom: 18px;
-      animation: fadeSlideDown 0.85s ease both;
-      text-shadow: 0 0 24px rgba(201,168,76,0.45);
+      color: var(--beige-accent);
+      margin-bottom: 22px;
+      animation: riseIn 0.7s ease both;
+    }
+    .author-label::before {
+      content: '';
+      display: block;
+      width: 28px; height: 1px;
+      background: var(--beige-accent);
     }
 
     header h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      color: var(--gold-light);
-      text-shadow: 0 0 40px rgba(201,168,76,0.3);
-      animation: fadeSlideDown 1s ease 0.1s both;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      animation: riseIn 0.75s ease 0.08s both;
     }
 
-    header h2 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      color: var(--gold);
-      letter-spacing: 0.1em;
-      margin: 28px 0 12px;
-      animation: fadeSlideDown 1s ease 0.15s both;
+    .header-divider {
+      width: 56px; height: 2px;
+      background: var(--blue-soft);
+      margin: 28px 0;
+      animation: riseIn 0.75s ease 0.14s both;
     }
 
-    header p.subtitle {
-      margin-top: 12px;
-      font-size: 1.15rem;
-      font-style: italic;
-      color: var(--cream-dark);
-      opacity: 0.8;
-      letter-spacing: 0.03em;
-      line-height: 1.75;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      animation: fadeSlideDown 1s ease 0.2s both;
-    }
-
-    .gold-rule {
-      margin: 28px auto 0;
-      width: 200px; height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      animation: fadeSlideDown 1s ease 0.3s both;
-    }
-
-    .search-wrapper {
-      position: relative;
-      z-index: 1;
+    .header-meta {
       display: flex;
-      justify-content: center;
-      padding: 32px 20px 0;
-      animation: fadeSlideDown 1s ease 0.4s both;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      animation: riseIn 0.75s ease 0.18s both;
+    }
+    .meta-pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 2px;
+      padding: 5px 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--blue-pale);
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
     }
 
-    .search-wrapper input {
-      width: 100%; max-width: 500px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,168,76,0.35);
-      border-radius: 4px;
-      padding: 12px 20px;
-      color: var(--cream);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      outline: none;
-      transition: border-color 0.3s, background 0.3s;
+    .curriculum-box {
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid var(--blue-soft);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      animation: riseIn 0.8s ease 0.22s both;
     }
-    .search-wrapper input::placeholder { color: rgba(245,230,184,0.4); }
-    .search-wrapper input:focus {
-      border-color: var(--gold);
-      background: rgba(255,255,255,0.07);
+    .curriculum-box h2 {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--beige-accent);
+      margin-bottom: 14px;
+    }
+    .curriculum-box p {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: rgba(200,223,240,0.82);
+      font-weight: 300;
+    }
+    .curriculum-box p + p { margin-top: 12px; }
+
+    /* ── SECTION TITLE ── */
+    .section-bar {
+      background: var(--blue-mid);
+      padding: 20px 48px 20px 60px;
+      animation: riseIn 0.8s ease 0.28s both;
+    }
+    .section-bar-inner {
+      max-width: 1060px; margin: 0 auto;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .section-bar h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--blue-pale);
+    }
+    .section-bar-line {
+      flex: 1; height: 1px;
+      background: rgba(200,223,240,0.2);
+    }
+    .section-bar-count {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      color: rgba(200,223,240,0.45);
+      letter-spacing: 0.06em;
     }
 
-    main {
+    /* ── SEARCH ── */
+    .search-wrapper {
+      padding: 28px 48px 0 60px;
+      animation: riseIn 0.8s ease 0.32s both;
+    }
+    .search-inner {
+      max-width: 1060px; margin: 0 auto;
       position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      width: 16px; height: 16px;
+      color: var(--gray-light);
+      pointer-events: none;
+    }
+    .search-wrapper input {
+      width: 100%; max-width: 440px;
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: 3px;
+      padding: 11px 16px 11px 40px;
+      color: var(--gray-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .search-wrapper input::placeholder { color: var(--gray-light); }
+    .search-wrapper input:focus {
+      border-color: var(--blue-muted);
+      box-shadow: 0 0 0 3px rgba(46,106,158,0.12);
     }
 
+    /* ── GRID ── */
+    main {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 28px 48px 80px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── CARD ── */
     .card {
-      background: linear-gradient(135deg, rgba(46,26,14,0.85) 0%, rgba(30,16,7,0.95) 100%);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 6px;
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: 4px;
       padding: 28px 24px 22px;
       position: relative;
-      overflow: hidden;
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-      animation: cardAppear 0.6s ease both;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardIn 0.5s ease both;
       cursor: pointer;
-    }
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0; transition: opacity 0.35s ease;
-    }
-    .card::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
-      opacity: 0; transition: opacity 0.35s ease;
-      pointer-events: none;
+      overflow: hidden;
     }
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.35);
-      border-color: rgba(201,168,76,0.5);
+      box-shadow: 0 12px 36px rgba(13,43,69,0.12), 0 2px 8px rgba(13,43,69,0.06);
+      border-color: var(--blue-pale);
     }
-    .card:hover::before, .card:hover::after { opacity: 1; }
 
     .card-badge {
-      font-family: 'Cinzel', serif;
-      font-size: 0.65rem; letter-spacing: 0.18em;
-      color: var(--gold); text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue-muted);
       margin-bottom: 10px;
-      display: flex; align-items: center; gap: 8px;
     }
     .card-badge::before {
       content: '';
-      display: inline-block;
+      display: block;
       width: 5px; height: 5px;
-      background: var(--gold);
-      transform: rotate(45deg); flex-shrink: 0;
+      background: var(--beige-accent);
+      transform: rotate(45deg);
+      flex-shrink: 0;
     }
 
     .card-code {
-      font-family: 'Cinzel', serif;
-      font-size: 0.75rem; color: var(--gold-light);
-      letter-spacing: 0.1em; margin-bottom: 6px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--blue-soft);
+      letter-spacing: 0.10em;
+      margin-bottom: 6px;
     }
 
     .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem; font-weight: 600;
-      color: var(--cream); line-height: 1.4; margin-bottom: 20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--blue-deep);
+      line-height: 1.4;
+      margin-bottom: 20px;
     }
 
     .card-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.9rem; font-style: italic;
-      color: var(--gold); text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.25s, color 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-style: italic;
       letter-spacing: 0.03em;
+      color: var(--blue-muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s, border-color 0.25s;
     }
-    .card-link:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+    .card-link:hover { color: var(--blue-deep); border-bottom-color: var(--blue-pale); }
     .card-link svg { width: 14px; height: 14px; flex-shrink: 0; transition: transform 0.25s; }
     .card-link:hover svg { transform: translateX(3px); }
 
+    /* ── FOOTER ── */
     footer {
-      position: relative; z-index: 1;
-      text-align: center; padding: 28px;
-      border-top: 1px solid rgba(201,168,76,0.15);
-      font-size: 0.85rem;
-      color: rgba(245,230,184,0.35);
-      font-style: italic; letter-spacing: 0.04em;
+      background: var(--blue-deep);
+      padding: 24px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    footer p {
+      font-size: 0.8rem;
+      color: rgba(200,223,240,0.45);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    footer .footer-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.95rem;
+      color: rgba(200,223,240,0.65);
     }
 
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-16px); }
+    /* ── ANIMATIONS ── */
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes cardAppear {
-      from { opacity: 0; transform: translateY(20px); }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    main .card:nth-child(1)  { animation-delay: 0.05s; }
-    main .card:nth-child(2)  { animation-delay: 0.10s; }
-    main .card:nth-child(3)  { animation-delay: 0.15s; }
-    main .card:nth-child(4)  { animation-delay: 0.20s; }
-    main .card:nth-child(5)  { animation-delay: 0.25s; }
-    main .card:nth-child(6)  { animation-delay: 0.30s; }
-    main .card:nth-child(7)  { animation-delay: 0.35s; }
-    main .card:nth-child(8)  { animation-delay: 0.40s; }
-    main .card:nth-child(9)  { animation-delay: 0.45s; }
-    main .card:nth-child(10) { animation-delay: 0.50s; }
-    main .card:nth-child(11) { animation-delay: 0.55s; }
-    main .card:nth-child(12) { animation-delay: 0.60s; }
-    main .card:nth-child(13) { animation-delay: 0.65s; }
-    main .card:nth-child(14) { animation-delay: 0.70s; }
-    main .card:nth-child(15) { animation-delay: 0.75s; }
-    main .card:nth-child(16) { animation-delay: 0.80s; }
-    main .card:nth-child(17) { animation-delay: 0.85s; }
-    main .card:nth-child(18) { animation-delay: 0.90s; }
-    main .card:nth-child(19) { animation-delay: 0.95s; }
-    main .card:nth-child(20) { animation-delay: 1.00s; }
-    main .card:nth-child(21) { animation-delay: 1.05s; }
+    main .card:nth-child(1)  { animation-delay: 0.04s; }
+    main .card:nth-child(2)  { animation-delay: 0.08s; }
+    main .card:nth-child(3)  { animation-delay: 0.12s; }
+    main .card:nth-child(4)  { animation-delay: 0.16s; }
+    main .card:nth-child(5)  { animation-delay: 0.20s; }
+    main .card:nth-child(6)  { animation-delay: 0.24s; }
+    main .card:nth-child(7)  { animation-delay: 0.28s; }
+    main .card:nth-child(8)  { animation-delay: 0.32s; }
+    main .card:nth-child(9)  { animation-delay: 0.36s; }
+    main .card:nth-child(10) { animation-delay: 0.40s; }
+    main .card:nth-child(11) { animation-delay: 0.44s; }
+    main .card:nth-child(12) { animation-delay: 0.48s; }
+    main .card:nth-child(13) { animation-delay: 0.52s; }
+    main .card:nth-child(14) { animation-delay: 0.56s; }
+    main .card:nth-child(15) { animation-delay: 0.60s; }
+    main .card:nth-child(16) { animation-delay: 0.64s; }
+    main .card:nth-child(17) { animation-delay: 0.68s; }
+    main .card:nth-child(18) { animation-delay: 0.72s; }
+    main .card:nth-child(19) { animation-delay: 0.76s; }
+    main .card:nth-child(20) { animation-delay: 0.80s; }
+    main .card:nth-child(21) { animation-delay: 0.84s; }
 
     .card.hidden { display: none; }
 
-    @media (max-width: 500px) {
-      main { grid-template-columns: 1fr; }
+    @media (max-width: 640px) {
+      header, .search-wrapper { padding-left: 24px; padding-right: 24px; }
+      .section-bar { padding-left: 24px; padding-right: 24px; }
+      main { padding: 24px; grid-template-columns: 1fr; }
+      footer { padding: 20px 24px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="header-ornament">
-    <span class="ornament-line"></span>
-    <span class="ornament-diamond"></span>
-    <span class="ornament-line right"></span>
+  <div class="header-inner">
+    <div class="author-label">Manoel Silva Barata</div>
+
+    <h1>E-Portfólio<br>de Formação em Programação</h1>
+
+    <div class="header-divider"></div>
+
+    <div class="header-meta">
+      <span class="meta-pill">Técnico em Programação · Nível 4</span>
+      <span class="meta-pill">IEFP de Alcoitão · 2026</span>
+      <span class="meta-pill">Biblioteconomia · UFF · 2000</span>
+    </div>
+
+    <div class="curriculum-box">
+      <h2>Currículo Resumido</h2>
+      <p>
+        <strong style="color:var(--blue-pale);font-weight:400;">Em Portugal —</strong>
+        Equivalência do 12.º Ano; curso, tendências e análises de mercado, Centro de Emprego e Formação Profissional de Évora, 2025; Técnico em Programação (nível 4), Centro de Emprego e Formação Profissional de Alcoitão, 2026.
+      </p>
+      <p>
+        <strong style="color:var(--blue-pale);font-weight:400;">No Brasil —</strong>
+        Graduação em Biblioteconomia e Documentação pela Universidade Federal Fluminense (2000); Especialização em Gestão Empreendedora nas Organizações pelo Centro Universitário Augusto Mota (2008); Mestrado em Biblioteconomia pelo PPGB - UNIRIO (2013-2015); Especialização em Inovação e Tecnologias na Educação - UTFPR (2018-2019).
+      </p>
+      <p>
+        <strong style="color:var(--blue-pale);font-weight:400;">Experiência —</strong>
+        Atuação desde 1999 em escritórios de contabilidade e jurídico; Bibliotecário na UERJ a partir de 2003, coordenando a Biblioteca Jurídica (CCS/C); a partir de 2012 na Fundação Oswaldo Cruz, Biblioteca de História das Ciências e da Saúde - COC/FIOCRUZ; por transferência em 2017, coordenador do Centro de Memória, Biblioteca, Informação e Documentação no Instituto Carlos Chagas (Fiocruz Paraná), gestor de Comunidade do Repositório ARCA e Membro do NAAC.
+      </p>
+    </div>
   </div>
-
-  <p class="author-name">Manoel Silva Barata</p>
-
-  <h1>E-Portfólio - Formação em Programação</h1>
-
-  <br><br>
-  <h2>Currículo Resumido</h2>
-  <p class="subtitle">
-    Em Portugal — Formação: Equivalência do 12.º Ano; curso, tendências e análises de mercado, Centro de Emprego e Formação Profissional de Évora, 2025; Técnico em Programação (nível 4), Centro de Emprego e Formação Profissional de Alcoitão, 2026.
-    <br><br>
-    No Brasil — Formação: Graduação em Biblioteconomia e Documentação pela Universidade Federal Fluminense (2000); Especialização em Gestão Empreendedora nas Organizações pelo Centro Universitário Augusto Mota (2008); Mestrado em Biblioteconomia pelo PPGB - Universidade Federal do Estado do Rio de Janeiro (2013-2015); Especialização em Inovação e Tecnologias na Educação - Universidade Tecnológica Federal do Paraná (2018-2019).
-    <br><br>
-    Experiência Profissional: Atuação desde 1999 como auxiliar em escritórios de contabilidade e jurídico; trabalhou a partir de 2003 como Bibliotecário na Universidade do Estado do Rio de Janeiro, participando em diversos grupos de trabalho, coordenando a Biblioteca Jurídica (CCS/C), desenvolvendo e ministrando Curso em Fontes de Informação Jurídica pela Faculdade de Direito da UERJ; posteriormente, passou a trabalhar a partir de 2012 como Bibliotecário na Fundação Oswaldo Cruz - Rio de Janeiro, na Biblioteca de História das Ciências e da Saúde - COC/FIOCRUZ; por transferência, a partir de 2017, passou a exercer suas atividades laborais no Instituto Carlos Chagas (Fiocruz Paraná), como coordenador do Centro de Memória, Biblioteca, Informação e Documentação, organizando e controlando o acervo bibliográfico e documental do Instituto, como gestor de Comunidade do Repositório Institucional ARCA e como Membro do Núcleo de Acesso Aberto ao Conhecimento (NAAC - ICC). Além disso, participou de projetos na área de gestão da informação e no ensino à distância no Brasil.
-  </p>
-
-  <br><br>
-  <h2>Materiais &amp; Códigos por Disciplina</h2>
-  <div class="gold-rule"></div>
 </header>
 
+<div class="section-bar">
+  <div class="section-bar-inner">
+    <h3>Materiais &amp; Códigos por Disciplina</h3>
+    <div class="section-bar-line"></div>
+    <span class="section-bar-count">21 repositórios</span>
+  </div>
+</div>
+
 <div class="search-wrapper">
-  <input type="text" id="search" placeholder="Pesquisar disciplina ou código UFCD…" />
+  <div class="search-inner">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+    <input type="text" id="search" placeholder="Pesquisar disciplina ou código UFCD…" />
+  </div>
 </div>
 
 <main id="grid">
 
-  <div class="card" data-search="vb net ufcd3934">
+  <div class="card" data-type="disc" data-search="vb net ufcd3934">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 3934</div>
     <div class="card-title">VB.NET</div>
-    <a class="card-link" href="VB-NET_UFCD3934/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="VB-NET_UFCD3934/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="utilitários ufcd0798">
+  <div class="card" data-type="disc" data-search="utilitários ufcd0798">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0798</div>
     <div class="card-title">Utilitários</div>
-    <a class="card-link" href="Utilitarios-UFCD0798/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Utilitarios-UFCD0798/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="testa codigos">
+  <div class="card" data-type="util" data-search="testa codigos">
     <div class="card-badge">Utilitário</div>
     <div class="card-code">—</div>
     <div class="card-title">Testa Códigos</div>
-    <a class="card-link" href="TestaCodigos/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="TestaCodigos/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="sistemas redes local ufcd0799">
+  <div class="card" data-type="disc" data-search="sistemas redes local ufcd0799">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0799</div>
     <div class="card-title">Sistemas de Redes Local</div>
-    <a class="card-link" href="Sistemas_Redes_Local_UFCD0799/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Sistemas_Redes_Local_UFCD0799/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="sistemas operativos ufcd0797">
+  <div class="card" data-type="disc" data-search="sistemas operativos ufcd0797">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0797</div>
     <div class="card-title">Sistemas Operativos</div>
-    <a class="card-link" href="Sistemas_Operativos_UFCD0797/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Sistemas_Operativos_UFCD0797/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="serviços adicionais redes ufcd0800">
+  <div class="card" data-type="disc" data-search="serviços adicionais redes ufcd0800">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0800</div>
     <div class="card-title">Serviços Adicionais de Redes</div>
-    <a class="card-link" href="Servicos_Adicionais_Redes-UFCD0800/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Servicos_Adicionais_Redes-UFCD0800/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="segurança desenvolvimento software ufcd10795">
+  <div class="card" data-type="disc" data-search="segurança desenvolvimento software ufcd10795">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10795</div>
     <div class="card-title">Segurança no Desenvolvimento de Software</div>
-    <a class="card-link" href="Seguranca-Desenvolvimento_Software_UFCD10795/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Seguranca-Desenvolvimento_Software_UFCD10795/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="power bi antonio matias">
+  <div class="card" data-type="disc" data-search="power bi antonio matias">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">Power BI</div>
     <div class="card-title">Power BI — António Matias</div>
-    <a class="card-link" href="Prower_BI-Antonio_Matias/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Prower_BI-Antonio_Matias/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="proteção dados pessoais ufcd10672">
+  <div class="card" data-type="disc" data-search="proteção dados pessoais ufcd10672">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10672</div>
     <div class="card-title">Proteção de Dados Pessoais</div>
-    <a class="card-link" href="Protecao_Dados_Pessoais-UFCD10672/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Protecao_Dados_Pessoais-UFCD10672/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="projeto programação ufcd10790">
+  <div class="card" data-type="disc" data-search="projeto programação ufcd10790">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10790</div>
     <div class="card-title">Projeto de Programação</div>
-    <a class="card-link" href="Projeto_Programacao_UFCD10790/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Projeto_Programacao_UFCD10790/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação sql ufcd0814">
+  <div class="card" data-type="disc" data-search="programação sql ufcd0814">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0814</div>
     <div class="card-title">Programação SQL</div>
-    <a class="card-link" href="Programacao_SQL_UFCD0814/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_SQL_UFCD0814/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação python ufcd10793">
+  <div class="card" data-type="disc" data-search="programação python ufcd10793">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10793</div>
     <div class="card-title">Programação Python</div>
-    <a class="card-link" href="Programacao_Python-UFCD10793/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_Python-UFCD10793/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação python avançado ufcd10794">
+  <div class="card" data-type="disc" data-search="programação python avançado ufcd10794">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10794</div>
     <div class="card-title">Programação Python Avançado</div>
-    <a class="card-link" href="Programacao_Python_Avancado-UFCD10794/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_Python_Avancado-UFCD10794/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação java ufcd0816">
+  <div class="card" data-type="disc" data-search="programação java ufcd0816">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0816</div>
     <div class="card-title">Programação JAVA</div>
-    <a class="card-link" href="Programacao_JAVA_UFCD0816/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_JAVA_UFCD0816/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação c c++ ufcd0809">
+  <div class="card" data-type="disc" data-search="programação c c++ ufcd0809">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0809</div>
     <div class="card-title">Programação C / C++</div>
-    <a class="card-link" href="Programacao_C-C++UFCD0809/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_C-C++UFCD0809/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação c# ufcd3935">
+  <div class="card" data-type="disc" data-search="programação c# ufcd3935">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 3935</div>
     <div class="card-title">Programação C#</div>
-    <a class="card-link" href="Programacao_C#UFCD3935/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_C#UFCD3935/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="programação asp net ufcd10792">
+  <div class="card" data-type="disc" data-search="programação asp net ufcd10792">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 10792</div>
     <div class="card-title">Programação ASP.NET</div>
-    <a class="card-link" href="Programacao_ASP-NET_UFCD10792/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Programacao_ASP-NET_UFCD10792/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="processamento computacional ufcd0802">
+  <div class="card" data-type="disc" data-search="processamento computacional ufcd0802">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0802</div>
     <div class="card-title">Processamento Computacional</div>
-    <a class="card-link" href="Processamento_Computacional_UFCD0802/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Processamento_Computacional_UFCD0802/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="pra antonio travessa">
+  <div class="card" data-type="pra" data-search="pra antonio travessa">
     <div class="card-badge">PRA</div>
     <div class="card-code">PRA</div>
     <div class="card-title">PRA — António Travessa</div>
-    <a class="card-link" href="PRA-Antonio_Travessa/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="PRA-Antonio_Travessa/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="plano negócios ufcd7854">
+  <div class="card" data-type="disc" data-search="plano negócios ufcd7854">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 7854</div>
     <div class="card-title">Plano de Negócios</div>
-    <a class="card-link" href="Plano_Negocios_UFCD7854/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Plano_Negocios_UFCD7854/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
-  <div class="card" data-search="metodologia programação ufcd0806">
+  <div class="card" data-type="disc" data-search="metodologia programação ufcd0806">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 0806</div>
     <div class="card-title">Metodologia de Programação</div>
-    <a class="card-link" href="Metodologia_Programacao_UFCD0806/" target="_blank">Aceder ao repositório
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a class="card-link" href="Metodologia_Programacao_UFCD0806/" target="_blank">
+        Aceder ao repositório
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
   </div>
 
 </main>
 
 <footer>
-  Manoel Silva Barata &nbsp;·&nbsp; msbarata / programador &nbsp;·&nbsp; Repositório GitHub &nbsp;·&nbsp; Formação Profissional
+  <span class="footer-brand">Manoel Silva Barata</span>
+  <p>msbarata / programador &nbsp;·&nbsp; Repositório GitHub &nbsp;·&nbsp; Formação Profissional</p>
 </footer>
 
 <script>
@@ -525,4 +660,3 @@
 
 </body>
 </html>
-
