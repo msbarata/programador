@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Media_Aprovacao_Alunos"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-15 08:50:00 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0xNTsiMDY6MTg6NDggIjsyNjYy"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0xNTsiMDg6NTA6MDAgIjs3OzI3NjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroa" type="Integer" array="False" size=""/>
+            <declare name="numerob" type="Integer" array="False" size=""/>
+            <declare name="operador" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduza o primeiro elemento da opera&#231;&#227;o: &quot;" newline="True"/>
+            <input variable="numeroa"/>
+            <output expression="&quot;Introduza o segundo elemento da opera&#231;&#227;o: &quot;" newline="True"/>
+            <input variable="numerob"/>
+            <if expression="numerob=0">
+                <then>
+                    <output expression="&quot;ERRO no segundo elemento da opera&#231;&#227;o!&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Para multiplicar digite: 1, &quot;&amp;&quot;dividir digite: 2, &quot;&amp;&quot;subtrair digite: 3, &quot;&amp;&quot;ou somar digite: 4 &quot;" newline="True"/>
+            <input variable="operador"/>
+            <if expression="operador=1">
+                <then>
+                    <assign variable="resultado" expression="numeroa*numerob"/>
+                    <output expression="&quot;O resultado desta multiplica&#231;&#227;o &#233;: &quot;&amp;resultado" newline="True"/>
+                </then>
+                <else>
+                    <if expression="operador=2">
+                        <then>
+                            <assign variable="resultado" expression="numeroa/numerob"/>
+                            <output expression="&quot;O resultado desta divis&#227;o &#233;: &quot;&amp;resultado" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="operador=3">
+                                <then>
+                                    <assign variable="resultado" expression="numeroa-numerob"/>
+                                    <output expression="&quot;O resultado desta subtra&#231;&#227;o &#233;: &quot;&amp;resultado" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="resultado" expression="numeroa+numerob"/>
+                                    <output expression="&quot;O resultado desta soma &#233;: &quot;&amp;resultado" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

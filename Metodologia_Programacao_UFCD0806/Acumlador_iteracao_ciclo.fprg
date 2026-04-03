@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Acumlador_iteracao_ciclo"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-21 07:04:12 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDY6NDA6MjQgIjsyNjQ4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDc6MDQ6MTIgIjsyOzI3NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador, acumulador" type="Integer" array="False" size=""/>
+            <assign variable="acumulador" expression="0"/>
+            <output expression="&quot;Escrever programa que some todos os n&#250;meros de 1 a 10: &quot;" newline="True"/>
+            <for variable="contador" start="1" end="10" direction="inc" step="1">
+                <assign variable="acumulador" expression="acumulador + contador"/>
+                <output expression="&quot;contador--&gt; &quot;&amp;contador &amp;&quot;---&quot;&amp; &quot;acumulador---&gt;&quot;&amp;acumulador" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

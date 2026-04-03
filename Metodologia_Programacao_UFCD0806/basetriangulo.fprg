@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Algoritmo1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-08 07:21:15 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0wODsiMDY6MTY6NDEgIjsyNjU1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0wODsiMDc6MjE6MTUgIjs1OzI3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="base, altura, area" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite o valor da base do triangulo: &quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;Digite o valor da altura:&quot;" newline="True"/>
+            <input variable="altura"/>
+            <assign variable="area" expression="(base * altura) / 2"/>
+            <output expression="&quot;o valor da &#225;rea do triangulo &#233; &quot;&amp;area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

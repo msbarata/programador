@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade4"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 07:34:05 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDc6MTE6MDggIjsyNjUw"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDc6MzQ6MDUgIjs0OzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, countpos, countneg" type="Integer" array="False" size=""/>
+            <assign variable="countpos" expression="0"/>
+            <assign variable="countneg" expression="0"/>
+            <assign variable="n" expression="1"/>
+            <while expression="n!=0">
+                <output expression="&quot;introduza um n&#250;mero diferente -(0 encessar o programa): &quot;" newline="True"/>
+                <input variable="n"/>
+                <if expression="n&gt;0">
+                    <then>
+                        <assign variable="countpos" expression="countpos+1"/>
+                    </then>
+                    <else>
+                        <if expression="n&lt;0">
+                            <then>
+                                <assign variable="countneg" expression="countneg+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;n&#250;meros positivos inseridos: &quot;&amp;countpos" newline="True"/>
+            <output expression="&quot;n&#250;meros negativos inseridos: &quot;&amp;countneg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

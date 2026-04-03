@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Algoritmo1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-08 07:13:14 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0wODsiMDY6MTY6NDEgIjsyNjU1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0wODsiMDc6MTM6MTQgIjszOzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor1, valor2, valor3" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite o primeiro n&#250;mero: &quot;" newline="True"/>
+            <input variable="valor1"/>
+            <output expression="&quot;Digite o segundo n&#250;mero :&quot;" newline="True"/>
+            <input variable="valor2"/>
+            <output expression="&quot;Digite o terceiro n&#250;mero :&quot;" newline="True"/>
+            <input variable="valor3"/>
+            <assign variable="media" expression="(valor1 + valor2 + valor3) / 3"/>
+            <output expression="&quot;o valor da m&#233;dia entre os tr&#234;s n&#250;meros &#233; &quot;&amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

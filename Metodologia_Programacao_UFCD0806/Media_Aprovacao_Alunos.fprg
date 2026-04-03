@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Media_Aprovacao_Alunos"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-15 06:59:33 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0xNTsiMDY6MTg6NDggIjsyNjYy"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0xNTsiMDY6NTk6MzMgIjsyOzI3NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="notaa" type="Integer" array="False" size=""/>
+            <declare name="notab" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduza uma nota para o teste A: &quot;" newline="True"/>
+            <input variable="notaa"/>
+            <output expression="&quot;Introduza uma nota para o teste B: &quot;" newline="True"/>
+            <input variable="notab"/>
+            <assign variable="media" expression="(notaa+notab)/2"/>
+            <if expression="media&gt;=9.5">
+                <then>
+                    <output expression="&quot;Aluno Transita com uma m&#233;dia &quot;&amp;media" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(media&gt;=7)">
+                        <then>
+                            <output expression="&quot;Aluno far&#225; Exame Oral com uma m&#233;dia &quot;&amp;media" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Aluno Reprovado com uma m&#233;dia &quot;&amp;media" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

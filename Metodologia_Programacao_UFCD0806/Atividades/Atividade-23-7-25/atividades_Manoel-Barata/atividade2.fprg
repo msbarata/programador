@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 02:48:29 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6NDg6MjkgIjs2OzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="30"/>
+            <while expression="m&lt;&gt;9">
+                <if expression="m % 2 == 0">
+                    <then>
+                        <output expression="m" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="m" expression="m-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

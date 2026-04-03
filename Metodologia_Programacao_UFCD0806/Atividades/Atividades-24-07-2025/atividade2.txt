@@ -1,0 +1,15 @@
+introduza um valor limite: 
+36
+3 é múltiplo de 3
+6 é múltiplo de 3
+9 é múltiplo de 3
+12 é múltiplo de 3
+15 é múltiplo de 3
+18 é múltiplo de 3
+21 é múltiplo de 3
+24 é múltiplo de 3
+27 é múltiplo de 3
+30 é múltiplo de 3
+33 é múltiplo de 3
+36 é múltiplo de 3
+

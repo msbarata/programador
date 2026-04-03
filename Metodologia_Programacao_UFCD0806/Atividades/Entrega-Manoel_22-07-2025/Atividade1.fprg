@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 08:05:06 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDQ6MzQ6MzcgIjsyNjU0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDg6MDU6MDYgIjs0OzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, P" type="Integer" array="False" size=""/>
+            <assign variable="P" expression="1"/>
+            <for variable="i" start="1" end="6" direction="inc" step="1">
+                <output expression="&quot;Introduza um n&#250;mero inteiro de 1 at&#233; 6: &quot;" newline="True"/>
+                <input variable="N"/>
+                <assign variable="P" expression="P*N"/>
+                <output expression="&quot;Resultado da multiplica&#231;&#227;o dos 6 n&#250;meros: &quot;&amp;P" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

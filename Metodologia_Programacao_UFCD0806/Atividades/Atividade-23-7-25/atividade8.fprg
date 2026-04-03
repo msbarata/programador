@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 09:51:24 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDk6NDU6MDggIjs4O21hcmNvO0xBUFRPUC1WUkhSSjRUMjsyMDI1LTA3LTIzOyIwNDowOTo0OSAiO0NhbGN1bGFkb3JhIGNvbSB2YWxpZGFjYW9bMV0uZnByZzs4ODU2"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDk6NTE6MjQgIjs4NjsyODI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, op, result" type="Integer" array="False" size=""/>
+            <declare name="continuar, operacao, s, resposta" type="String" array="False" size=""/>
+            <assign variable="continuar" expression="&quot;s&quot;"/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="0"/>
+            <assign variable="op" expression="0"/>
+            <assign variable="result" expression="0"/>
+            <output expression="&quot;Selecione opera&#231;&#227;o -&gt; (1)-multiplica&#231;&#227;o (2)-divis&#227;o; (3)-soma; (4)-subtra&#231;&#227;o: &quot;" newline="True"/>
+            <input variable="op"/>
+            <while expression="continuar != &quot;n&quot;">
+                <if expression="continuar=&quot;s&quot; and op=1">
+                    <then>
+                        <output expression="&quot;opera&#231;&#227;o multiplica&#231;&#227;o !&quot;" newline="True"/>
+                        <output expression="&quot;Introduza o primeiro n&#250;mero: &quot;" newline="True"/>
+                        <input variable="n1"/>
+                        <output expression="&quot;Introduza o segundo n&#250;mero: &quot;" newline="True"/>
+                        <input variable="n2"/>
+                        <assign variable="result" expression="n1*n2"/>
+                        <output expression="n1&amp;&quot;X&quot;&amp;n2&amp;&quot;=&quot;&amp;result" newline="True"/>
+                        <output expression="&quot;Deseja fazer uma outra divis&#227;o [s] ou [n]?&quot;" newline="True"/>
+                        <input variable="continuar"/>
+                        <assign variable="continuar" expression="continuar"/>
+                    </then>
+                    <else>
+                        <if expression="continuar=&quot;s&quot; and op=2">
+                            <then>
+                                <output expression="&quot;opera&#231;&#227;o divis&#227;o !&quot;" newline="True"/>
+                                <output expression="&quot;Introduza o primeiro n&#250;mero: &quot;" newline="True"/>
+                                <input variable="n1"/>
+                                <output expression="&quot;Introduza o segundo n&#250;mero: &quot;" newline="True"/>
+                                <input variable="n2"/>
+                                <assign variable="result" expression="n1/n2"/>
+                                <output expression="n1&amp;&quot;/&quot;&amp;n2&amp;&quot;=&quot;&amp;result" newline="True"/>
+                                <output expression="&quot;Deseja fazer uma outra divis&#227;o [s] ou [n]?&quot;" newline="True"/>
+                                <input variable="continuar"/>
+                                <assign variable="continuar" expression="continuar"/>
+                            </then>
+                            <else>
+                                <if expression="continuar=&quot;s&quot; and op=3">
+                                    <then>
+                                        <output expression="&quot;opera&#231;&#227;o soma !&quot;" newline="True"/>
+                                        <output expression="&quot;Introduza o primeiro n&#250;mero: &quot;" newline="True"/>
+                                        <input variable="n1"/>
+                                        <output expression="&quot;Introduza o segundo n&#250;mero: &quot;" newline="True"/>
+                                        <input variable="n2"/>
+                                        <assign variable="result" expression="n1+n2"/>
+                                        <output expression="n1&amp;&quot;+&quot;&amp;n2&amp;&quot;=&quot;&amp;result" newline="True"/>
+                                        <output expression="&quot;Deseja fazer uma outra soma [s] ou [n]?&quot;" newline="True"/>
+                                        <input variable="continuar"/>
+                                        <assign variable="continuar" expression="continuar"/>
+                                    </then>
+                                    <else>
+                                        <if expression="continuar=&quot;s&quot; and op=4">
+                                            <then>
+                                                <output expression="&quot;opera&#231;&#227;o subtra&#231;&#227;o !&quot;" newline="True"/>
+                                                <output expression="&quot;Introduza o primeiro n&#250;mero: &quot;" newline="True"/>
+                                                <input variable="n1"/>
+                                                <output expression="&quot;Introduza o segundo n&#250;mero: &quot;" newline="True"/>
+                                                <input variable="n2"/>
+                                                <assign variable="result" expression="n1-n2"/>
+                                                <output expression="n1&amp;&quot;-&quot;&amp;n2&amp;&quot;=&quot;&amp;result" newline="True"/>
+                                                <output expression="&quot;Deseja fazer uma outra subtra&#231;&#227;o [s] ou [n]?&quot;" newline="True"/>
+                                                <input variable="continuar"/>
+                                                <assign variable="continuar" expression="continuar"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Opera&#231;&#227;o abortada pelo usu&#225;rio!&quot;" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

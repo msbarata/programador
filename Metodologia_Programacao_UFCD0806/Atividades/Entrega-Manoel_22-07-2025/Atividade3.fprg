@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 06:01:54 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDQ6MzQ6MzcgIjsyNjU0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDY6MDE6NTQgIjs4OzI3NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, P, c, d, e, f" type="Integer" array="False" size=""/>
+            <assign variable="P" expression="1"/>
+            <assign variable="c" expression="0"/>
+            <assign variable="d" expression="0"/>
+            <assign variable="e" expression="0"/>
+            <assign variable="f" expression="0"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;Introduza um n&#250;mero inteiro de 0 at&#233; 100: &quot;" newline="True"/>
+                <input variable="N"/>
+                <if expression="N&gt;=0 AND N&lt;=25">
+                    <then>
+                        <assign variable="c" expression="c+1"/>
+                    </then>
+                    <else>
+                        <if expression="N&gt;=26 AND N&lt;=50">
+                            <then>
+                                <assign variable="d" expression="d+1"/>
+                            </then>
+                            <else>
+                                <if expression="N&gt;=51 AND N&lt;=75">
+                                    <then>
+                                        <assign variable="e" expression="e+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="N&gt;=76 AND N&lt;=100">
+                                            <then>
+                                                <assign variable="f" expression="f+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;O quantitativo de numeros no intervalo de [0-25] e: &quot;&amp;c" newline="True"/>
+            <output expression="&quot;O quantitativo de numeros  no intervalo de [26-50] e: &quot;&amp;d" newline="True"/>
+            <output expression="&quot;O quantitativo de numeros no intervalo de [51-75] e: &quot;&amp;e" newline="True"/>
+            <output expression="&quot;O quantitativo de numeros no intervalo de [76-100] e  e: &quot;&amp;f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

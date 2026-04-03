@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 10:45:33 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDY6MjQ6NTEgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMTA6NDU6MzMgIjsxNjsyODEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor1, valor2, limite" type="Integer" array="False" size=""/>
+            <assign variable="valor2" expression="0"/>
+            <assign variable="valor1" expression="0"/>
+            <output expression="&quot;introduza o valor 1 (menor): &quot;" newline="True"/>
+            <input variable="valor1"/>
+            <output expression="&quot;introduza o valor 2 (maior): &quot;" newline="True"/>
+            <input variable="valor2"/>
+            <assign variable="limite" expression="valor1"/>
+            <while expression="limite &lt; valor2">
+                <if expression="limite%3 = 0">
+                    <then>
+                        <output expression="limite&amp;&quot; &#233; m&#250;ltiplo de 3&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="limite" expression="limite+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 06:51:50 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDY6MjQ6NTEgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDY6NTE6NTAgIjs5OzI3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, limite" type="Integer" array="False" size=""/>
+            <output expression="&quot;introduza um valor limite: &quot;" newline="True"/>
+            <input variable="valor"/>
+            <assign variable="limite" expression="1"/>
+            <while expression="limite &lt;= valor">
+                <if expression="limite%3 = 0">
+                    <then>
+                        <output expression="limite&amp;&quot; &#233; m&#250;ltiplo de 3&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="limite" expression="limite+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

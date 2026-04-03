@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exemplo-RepitaUntil-Faca_Enquanto"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 04:26:14 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDQ6MjA6MjMgIjsyNjQ1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDQ6MjY6MTQgIjsxOzI3NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count, n, m" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="m" expression="1"/>
+            <do expression="m!=0">
+                <output expression="&quot;introduza um numero: &quot;" newline="True"/>
+                <input variable="m"/>
+                <assign variable="count" expression="count+1"/>
+            </do>
+            <output expression="&quot;Resultado: &quot;&amp;count-1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

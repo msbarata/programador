@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 09:53:49 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDk6NTM6NDkgIjsxNzsyODI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade, somaidade, contador" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="idade" expression="1"/>
+            <assign variable="somaidade" expression="0"/>
+            <assign variable="contador" expression="0"/>
+            <assign variable="media" expression="0"/>
+            <while expression="idade&lt;&gt;0">
+                <output expression="&quot;Introduza as idades que precisa calcular m&#233;dia -(Digitar 0 para encerrar o programa): &quot;" newline="True"/>
+                <input variable="idade"/>
+                <assign variable="somaidade" expression="somaidade+idade"/>
+                <assign variable="contador" expression="contador+1"/>
+            </while>
+            <assign variable="contador" expression="contador-1"/>
+            <assign variable="media" expression="somaidade/contador"/>
+            <output expression="&quot;M&#233;dia das idades inseridas: &quot;&amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 07:10:13 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDY6MjQ6NTEgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDc6MTA6MTMgIjsxMjsyODA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, contador" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <do expression="valor%7!=0">
+                <output expression="&quot;introduza um valor: &quot;" newline="True"/>
+                <input variable="valor"/>
+                <assign variable="contador" expression="contador+1"/>
+            </do>
+            <output expression="&quot;n&#250;mero de valores introduzidos: &quot;&amp;contador" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

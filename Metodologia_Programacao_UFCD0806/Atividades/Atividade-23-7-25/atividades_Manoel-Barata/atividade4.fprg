@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 03:31:54 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDM6MzE6NTQgIjsyMTsyODA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <assign variable="n" expression="1"/>
+            <assign variable="m" expression="0"/>
+            <assign variable="resultado" expression="0"/>
+            <output expression="&quot;Introduza um n&#250;mero para verificar a tabuada: &quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="m&lt;&gt;10">
+                <assign variable="m" expression="m+1"/>
+                <assign variable="resultado" expression="n*m"/>
+                <output expression="m&amp;&quot;*&quot;&amp;n&amp;&quot;=&quot;&amp;resultado" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade5"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 08:01:03 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDc6MjU6MzQgIjsyNjU0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDg6MDE6MDMgIjs4OzI3NjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="letra" type="String" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <output expression="&quot;Escreva uma letra at&#233; que(x) seja digitado: &quot;" newline="True"/>
+            <input variable="letra"/>
+            <while expression="letra!=&quot;x&quot;">
+                <if expression="letra=&quot;a&quot;">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else>
+                        <if expression="letra=&quot;e&quot;">
+                            <then>
+                                <assign variable="count" expression="count+1"/>
+                            </then>
+                            <else>
+                                <if expression="letra=&quot;i&quot;">
+                                    <then>
+                                        <assign variable="count" expression="count+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="letra=&quot;o&quot;">
+                                            <then>
+                                                <assign variable="count" expression="count+1"/>
+                                            </then>
+                                            <else>
+                                                <if expression="letra=&quot;u&quot;">
+                                                    <then>
+                                                        <assign variable="count" expression="count+1"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Escreva uma letra at&#233; que(x)seja introduzida: &quot;" newline="True"/>
+                <input variable="letra"/>
+            </while>
+            <output expression="&quot;o n&#250;mero total de vogais: &quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

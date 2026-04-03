@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exibir os numeros entre 1 e 10"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-21 06:23:36 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDU6MjQ6NTggIjsyNjU2"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDY6MjM6MzYgIjs3OzI3NjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador, resultado, numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduza o numero para Tabuada :&quot;" newline="True"/>
+            <input variable="numero"/>
+            <output expression="&quot;Tabuada do n&#250;mero qualquer :&quot;" newline="True"/>
+            <for variable="contador" start="1" end="10" direction="inc" step="1">
+                <assign variable="resultado" expression="contador*numero"/>
+                <output expression="numero&amp;&quot; X &quot;&amp;contador&amp;&quot; = &quot;&amp;resultado" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 10:26:17 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDY6MjQ6NTEgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMTA6MjY6MTcgIjs1MDsyODEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, contador, i, contadorn" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="contador" expression="1"/>
+            <assign variable="contadorn" expression="1"/>
+            <output expression="&quot;Introduza um n&#250;mero inteiro positivo: &quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n!=0">
+                <then>
+                    <for variable="i" start="1" end="n" direction="inc" step="1">
+                        <if expression="i % 4 == 0">
+                            <then>
+                                <output expression="i&amp;&quot; &#233; m&#250;ltiplo de 4&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <while expression="contadorn&lt;=n">
+                        <if expression="contadorn % 4 == 0 AND contadorn % 2 == 0">
+                            <then>
+                                <assign variable="contador" expression="contador+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="contadorn" expression="contadorn+1"/>
+                    </while>
+                    <output expression="&quot;Quantitativo de n&#250;meros pares dentre os m&#250;ltiplos de 4 &#233;: &quot;&amp;contador-1" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;ERRO!!! - Introduza um n&#250;mero inteiro diferente de 0&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

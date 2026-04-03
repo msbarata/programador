@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 09:57:19 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDk6NTc6MTkgIjsyOTsyODMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n, contador" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <assign variable="m" expression="0"/>
+            <assign variable="n" expression="1"/>
+            <output expression="&quot;Introduza um n&#250;mero (n) para fazer a sua contagem: &quot;" newline="True"/>
+            <input variable="m"/>
+            <while expression="contador&lt;=m-1">
+                <assign variable="contador" expression="contador+1"/>
+                <output expression="contador" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

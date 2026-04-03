@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Acumlador_iteracao_ciclo"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-21 08:06:10 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDY6NDA6MjQgIjsyNjQ4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMTsiMDg6MDY6MTAgIjs2OzI3NjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, acumulador, k, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escrever programa que some todos os n&#250;meros entre dois numeros qualquer: &quot;" newline="True"/>
+            <output expression="&quot;Escreva o limite inferior do intervalo da soma: &quot;" newline="True"/>
+            <input variable="k"/>
+            <output expression="&quot;Escreva o limite superior do intervalo da soma: &quot;" newline="True"/>
+            <input variable="j"/>
+            <assign variable="acumulador" expression="0"/>
+            <for variable="i" start="k" end="j" direction="inc" step="1">
+                <assign variable="acumulador" expression="acumulador+i"/>
+                <output expression="&quot;i :&quot;&amp;i&amp;&quot;---&quot;&amp;&quot;acumulador---&gt;&quot;&amp;acumulador" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

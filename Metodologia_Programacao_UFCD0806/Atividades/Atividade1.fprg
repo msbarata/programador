@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 05:21:28 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDQ6MzQ6MzcgIjsyNjU0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDU6MjE6MjggIjsxOzI3NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2, numero3, numero4, numero5, numero6, i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="6" direction="inc" step="1">
+                <output expression="&quot;Introduza um n&#250;mero inteiro de 1 at&#233; 6: &quot;" newline="True"/>
+                <input variable="numero1"/>
+                <input variable="numero2"/>
+                <input variable="numero3"/>
+                <input variable="numero4"/>
+                <input variable="numero5"/>
+                <input variable="numero6"/>
+                <output expression="&quot; o resultado &#233;: &quot;&amp;numero1*numero2*numero3*numero4*numero5*numero6" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

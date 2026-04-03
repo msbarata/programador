@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exemplo_numeros_PAR-IMPAR"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-24 05:55:35 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDU6MjA6NTAgIjsyNjQ3"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yNDsiMDU6NTU6MzUgIjszOzI3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Calcula se determinado valor introduzido &#233; par ou impar?&quot;" newline="True"/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <assign variable="valor" expression="0"/>
+            <output expression="&quot;Introduza um numero inteiro para verificar se &#233; multiplo de 3 e 5?&quot;" newline="True"/>
+            <input variable="valor"/>
+            <if expression="valor%3==0 AND valor%5==0">
+                <then>
+                    <output expression="&quot;O numero &quot;&amp;valor&amp;&quot; &#233; multiplo de 3 e 5 simultaneamente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O numero &quot;&amp;valor&amp;&quot; n&#227;o &#233; multiplo de 3 e 5 simultaneamente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

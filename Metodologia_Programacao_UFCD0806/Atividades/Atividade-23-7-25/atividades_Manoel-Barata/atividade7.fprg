@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="atividade1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-23 10:08:54 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMDI6MzM6MjkgIjsyNjUz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMzsiMTA6MDg6NTQgIjszNjsyODE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, secreto" type="Integer" array="False" size=""/>
+            <assign variable="secreto" expression="83"/>
+            <assign variable="n" expression="0"/>
+            <while expression="n!=secreto">
+                <output expression="&quot;Introduza um n&#250;mero inteiro entre 1 a 100 at&#233; que acertes o valor secreto: &quot;" newline="True"/>
+                <input variable="n"/>
+                <if expression="n&lt;83">
+                    <then>
+                        <output expression="&quot;Muito baixo&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="n&gt;83">
+                            <then>
+                                <output expression="&quot;Muito alto&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Acertastes&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

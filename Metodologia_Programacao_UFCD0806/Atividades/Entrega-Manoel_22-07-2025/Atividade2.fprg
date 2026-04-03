@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Nome Morada"/>
+        <attribute name="authors" value="tatia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 08:09:17 "/>
+        <attribute name="created" value="dGF0aWE7VEFUSUFOQUNMRUxJTzsyMDI1LTA3LTIyOyIwNDo1ODo1NyAiOzI2ODk="/>
+        <attribute name="edited" value="dGF0aWE7VEFUSUFOQUNMRUxJTzsyMDI1LTA3LTIyOyIwNToxNToyMSAiOzE7Mjc4Mg=="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTVFOFFDNlA7MjAyNS0wNy0yMjsiMDg6MDk6MTcgIjsyOzI3Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Registro de utilizador.&quot;" newline="True"/>
+            <declare name="N, M" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira seu nome: &quot;" newline="True"/>
+            <input variable="N"/>
+            <output expression="&quot;Insira seu Endere&#231;o: &quot;" newline="True"/>
+            <input variable="M"/>
+            <output expression="&quot;Nome do utilzador: &quot; &amp;N&amp;  &quot; &lt;---&gt; Morada: &quot;&amp;m" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
