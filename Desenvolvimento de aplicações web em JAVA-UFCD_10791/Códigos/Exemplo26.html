@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<body onload="inicializa()">
+<div id="janela" style="width:1500px;height:1000px">
+<br><p id="p1"></p>
+</div>
+<script>
+var x=0;
+var aumento=1;
+
+function inicializa()
+{
+setInterval(function(){actualiza()},20);//lança teporizador que chama atualiza() todos os 10ms
+}
+
+function actualiza()
+
+{
+    x = x + aumento;
+
+    if (x >= 255) {
+        x = 255;
+        aumento = -1;   // começa a descer
+    }
+
+    if (x <= 0) {
+        x = 0;
+        aumento = 1;    // começa a subir
+    }
+
+document.getElementById("p1").innerHTML=x;//valor de x é apresentado no parágrafo
+document.getElementById("p1").style="font-size:"+x+"px;color:rgb("+ x + ",100,100)";
+
+document.getElementById("janela").style="background-color:rgb("+ (255-x) + ",100,100)";
+}
+</script></body></html>

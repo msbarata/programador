@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type='text/javascript'>
+
+function escreve()
+{
+document.getElementById('ravioli33').innerHTML=document.getElementById('calzone').value;
+}
+function pizza()
+{
+document.getElementById('ravioli33').innerHTML="ravioli2";
+}
+
+function pizza3()
+{
+document.getElementById('ravioli33').innerHTML="ravioli3";
+}
+</script>
+
+</head>
+	<body>
+		<input id='calzone' onkeyup='escreve()'       size=60>
+		<button onmouseover='pizza()' onmouseout='pizza3()'>Clique aqui</button>
+		<button onClick='pizza3()'>Clique aqui 2</button><br>
+		<div id='ravioli33'>................</div>
+	</body>
+</html>
+

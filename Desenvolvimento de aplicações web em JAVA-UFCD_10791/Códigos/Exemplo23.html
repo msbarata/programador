@@ -1,0 +1,107 @@
+<html>
+<body onkeydown="MexeOMingau(event)" onmousemove="MexeORato(event)">
+<audio id="blop" controls style="width:0px" preload="auto">
+    <source src="Blop.mp3">
+</audio>
+<audio id="somgamemusic" controls style="width:0px" preload="auto">  
+       	<source  src="GameMusic.mp3">
+        </audio>
+<audio id="somgameover" controls style="width:0px" preload="auto">  
+        <source  src="GameOver.mp3">
+		</audio>				
+		
+<p id="gameover" style="display:none; position:fixed; top:20%; left:20%; color:red; font-size:60px; font-weight:bold; text-align:center; z-index:999;">
+    GAME OVER!<br><span id="pontosfinal"></span>
+</p>
+<div id="janela" style="width:1000px;height:500px; background-color:green; position:relative">
+    <div id="p1" style="position:absolute; top:10px; left:10px; color:white; font-size:30px; font-weight:bold;">
+        Pontos: 0
+    </div>
+    <img id="bola" style="width:100px;height:100px; position:absolute; top:200px; left:200px" src="1.png">
+    <img id="raquete" style="width:200px; position:absolute; top:400px; left:0px;" src="raquete.png">
+</div>
+<script>
+var x = 200;
+var y = 0;
+var aumentoX = 1;
+var aumentoY = 1;
+var posRaquete = 0;
+var pontos = 0;
+var temporizador;
+
+function inicializa() {
+    temporizador = setInterval(function(){ actualiza(); }, 10);
+}
+
+function actualiza() {
+    x = x + aumentoX;
+    if (x > (1000 - 100)) aumentoX = -2;
+    if (x < 0) aumentoX = 2;
+
+    y = y + aumentoY;
+    if (y < 0) aumentoY = 2;
+
+    // Colisão com a raquete
+    if (
+        y + 100 >= 400 &&
+        x + 100 >= posRaquete &&
+        x <= posRaquete + 150 &&
+        aumentoY > 0
+    ) {
+        aumentoY = -2;
+        pontos = pontos + 1;
+        TocarBlop();
+        document.getElementById("p1").innerHTML = "Pontos: " + pontos;
+    }
+
+    // Game Over
+    if (y > 500) {
+        clearInterval(temporizador);
+        document.getElementById("gameover").style.display = "block";		
+        document.getElementById("pontosfinal").innerHTML = "Fizeste " + pontos + " pontos!";
+		TocarGameOver();
+	}
+
+    document.getElementById("bola").style.left = x + "px";
+    document.getElementById("bola").style.top = y + "px";
+    document.getElementById("janela").style.backgroundColor = "rgb(" + (255 - x) + ",100,100)";
+}
+
+function MexeOMingau(event) {
+    var key = event.keyCode;
+    if (key == 76) {
+        posRaquete = posRaquete + 10;
+        document.getElementById("raquete").style.left = posRaquete + "px";
+    }
+    if (key == 75) {
+        posRaquete = posRaquete - 10;
+        document.getElementById("raquete").style.left = posRaquete + "px";
+    }
+    if (key == 74) {  // ← tecla J — dentro da função!
+        inicializa();
+    }
+}
+
+function MexeORato(event) {
+    posRaquete = event.clientX - 80;
+    document.getElementById("raquete").style.left = posRaquete + "px";
+}
+
+function TocarBlop() {
+    document.getElementById('blop').pause();
+    document.getElementById('blop').currentTime = 0;
+    document.getElementById('blop').play();
+}
+
+function TocarGameOver() {
+    document.getElementById('somgamemusic').currentTime = 5;
+    document.getElementById('somgamemusic').play();
+	  setTimeout(function() {
+        document.getElementById('somgamemusic').pause();
+    }, 8000); // 8000 = 8 segundos
+	document.getElementById('somgameover').currentTime = 0;
+    document.getElementById('somgameover').play();
+}
+</script>
+</body>
+</html>

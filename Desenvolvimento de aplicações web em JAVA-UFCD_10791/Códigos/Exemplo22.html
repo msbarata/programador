@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<body onload="inicializa()">
+<img id="bola" style="width:100px;height:100px; position:absolute; top:200px; left:200px" src="1.jpg">
+
+<script>
+
+var x=400
+var y=400
+
+var aumento=5;
+var aumentoY=5;
+
+
+function inicializa()
+{
+setInterval(function(){actualiza()},10);//lança teporizador que chama atualiza() todos os 10ms
+}
+
+function actualiza()
+{
+    x = x + aumento;
+    y = y + aumentoY;
+
+    if (x >= window.innerWidth - 100) {  
+        x = window.innerWidth - 100;
+        aumento = -3;
+    }
+    if (x <= 0) {
+        x = 0;
+        aumento = 3;
+    }
+
+    if (y >= window.innerHeight - 100) {  
+        y = window.innerHeight - 100;
+        aumentoY = -3;
+    }
+    if (y <= 0) {
+        y = 0;
+        aumentoY = 3;		
+    }
+		
+
+var tamanho = 50 + x * (60 / 950); // varia tamanho da bola
+document.getElementById("bola").style.width = tamanho + "px";
+document.getElementById("bola").style.height = tamanho + "px";
+
+document.getElementById("bola").style.left=x + "px";
+document.getElementById("bola").style.top=y + "px";
+
+
+document.getElementById("janela").style="background-color:rgb("+ (255-x) + ",100,100)";
+}
+</script></body></html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+">
+
+<audio id="a1" controls style="width: 0px" preload="auto">
+	<source src="piano/040.wav">
+</audio>
+
+<audio id="a2" controls style="width: 0px" preload="auto">
+	<source src="piano/041.wav">
+</audio>
+<audio id="a3" controls style="width: 0px" preload="auto">
+	<source src="piano/042.wav">
+</audio>
+<audio id="a4" controls style="width: 0px" preload="auto">
+	<source src="piano/043.wav">
+</audio>
+<audio id="a5" controls style="width: 0px" preload="auto">
+	<source src="piano/044.wav">
+</audio>
+<audio id="a6" controls style="width: 0px" preload="auto">
+	<source src="piano/045.wav">
+</audio>
+<audio id="a7" controls style="width: 0px" preload="auto">
+	<source src="piano/046.wav">
+</audio>
+<audio id="a8" controls style="width: 0px" preload="auto">
+	<source src="piano/047.wav">
+</audio>
+<audio id="a9" controls style="width: 0px" preload="auto">
+	<source src="piano/048.wav">
+</audio>
+<audio id="a10" controls style="width: 0px" preload="auto">
+	<source src="piano/049.wav">
+</audio>
+<audio id="a11" controls style="width: 0px" preload="auto">
+	<source src="piano/050.wav">
+</audio>
+<audio id="a12" controls style="width: 0px" preload="auto">
+	<source src="piano/051.wav">
+</audio>
+<audio id="a13" controls style="width: 0px" preload="auto">
+	<source src="piano/052.wav">
+</audio>
+<audio id="a14" controls style="width: 0px" preload="auto">
+	<source src="piano/053.wav">
+</audio>
+<audio id="a15" controls style="width: 0px" preload="auto">
+	<source src="piano/054.wav">
+</audio>
+<audio id="a16" controls style="width: 0px" preload="auto">
+	<source src="piano/055.wav">
+</audio>
+<audio id="a17" controls style="width: 0px" preload="auto">
+	<source src="piano/056.wav">
+</audio>
+
+
+<audio id="house" controls style="width: 0px" preload="auto">
+	<source src="house.mp3">
+</audio>
+
+<audio id="rock" controls style="width: 0px" preload="auto">
+	<source src="radiohead.mp3">
+</audio>
+
+
+<div style="position:absolute; left:27%; top:50%; transform:translate(-50%, -50%);">
+
+
+<button onclick="donota()" style="position:absolute;left:100px;top:100px;width:60px;height:120px">DO</button>
+<button onclick="dosnota();dobnota()" style="position:absolute;left:145px;top:100px;width:30px;height:80px;background-color:black;z-index:1"></button>
+
+
+<button onclick="renota()" style="position:absolute;left:160px;top:100px;width:60px;height:120px">RE</button>
+<button onclick="resnota();rebnota()" style="position:absolute;left:205px;top:100px;width:30px;height:80px;background-color:black;z-index:1"></button>
+
+
+<button onclick="minota()" style="position:absolute;left:220px;top:100px;width:60px;height:120px">MI</button>
+
+<button onclick="fanota()" style="position:absolute;left:280px;top:100px;width:60px;height:120px">FA</button>
+<button onclick="fasnota()" style="position:absolute;left:325px;top:100px;width:30px;height:80px;background-color:black;z-index:1"></button>
+
+
+<button onclick="solnota()" style="position:absolute;left:340px;top:100px;width:60px;height:120px">SOL</button>
+<button onclick="solsnota()" style="position:absolute;left:385px;top:100px;width:30px;height:80px;background-color:black;z-index:1"></button>
+
+
+<button onclick="lanota()" style="position:absolute;left:400px;top:100px;width:60px;height:120px">LA</button>
+<button onclick="lasnota()" style="position:absolute;left:445px;top:100px;width:30px;height:80px;background-color:black;z-index:1"></button>
+
+
+<button onclick="sinota()" style="position:absolute;left:460px;top:100px;width:60px;height:120px">SI</button>
+
+</div>
+
+<button onclick="house()">House</button>
+<button onclick="rock()">Rock</button>
+<button onclick="LancaAleatorio()">Tocar Aleatório</button>
+
+</div>
+
+<script>
+var house_a_tocar=0;
+var toca=0;
+
+function donota()
+{
+document.getElementById('a1').pause();
+document.getElementById('a1').currentTime=0;
+document.getElementById('a1').play();
+}
+function renota()
+{
+document.getElementById('a2').pause();
+document.getElementById('a2').currentTime=0;
+document.getElementById('a2').play();
+}
+function minota()
+{
+document.getElementById('a3').pause();
+document.getElementById('a3').currentTime=0;
+document.getElementById('a3').play();
+}
+function fanota()
+{
+document.getElementById('a4').pause();
+document.getElementById('a4').currentTime=0;
+document.getElementById('a4').play();
+}
+function solnota()
+{
+document.getElementById('a5').pause();
+document.getElementById('a5').currentTime=0;
+document.getElementById('a5').play();
+}
+function lanota()
+{
+document.getElementById('a6').pause();
+document.getElementById('a6').currentTime=0;
+document.getElementById('a6').play();
+}
+function sinota()
+{
+document.getElementById('a7').pause();
+document.getElementById('a7').currentTime=0;
+document.getElementById('a7').play();
+}
+function dosnota()
+{
+document.getElementById('a8').pause();
+document.getElementById('a8').currentTime=0;
+document.getElementById('a8').play();
+}
+function resnota()
+{
+document.getElementById('a9').pause();
+document.getElementById('a9').currentTime=0;
+document.getElementById('a9').play();
+}
+function misnota()
+{
+document.getElementById('a10').pause();
+document.getElementById('a10').currentTime=0;
+document.getElementById('a10').play();
+}
+function fasnota()
+{
+document.getElementById('a11').pause();
+document.getElementById('a11').currentTime=0;
+document.getElementById('a11').play();
+}
+function solsnota()
+{
+document.getElementById('a12').pause();
+document.getElementById('a12').currentTime=0;
+document.getElementById('a12').play();
+}
+function lasnota()
+{
+document.getElementById('a13').pause();
+document.getElementById('a13').currentTime=0;
+document.getElementById('a13').play();
+}
+function sisnota()
+{
+document.getElementById('a14').pause();
+document.getElementById('a14').currentTime=0;
+document.getElementById('a14').play();
+}
+function dobnota()
+{
+document.getElementById('a15').pause();
+document.getElementById('a15').currentTime=0;
+document.getElementById('a15').play();
+}
+function rebnota()
+{
+document.getElementById('a16').pause();
+document.getElementById('a16').currentTime=0;
+document.getElementById('a16').play();
+}
+function mibnota()
+{
+document.getElementById('a17').pause();
+document.getElementById('a17').currentTime=0;
+document.getElementById('a17').play();
+}
+
+
+
+function house()
+{
+document.getElementById('house').currentTime=0;
+if (house_a_tocar==0)
+	{
+	document.getElementById('house').play();
+	house_a_tocar=1;
+	}
+else
+	{
+	document.getElementById('house').pause();
+	house_a_tocar=0;
+	}
+}
+
+
+function rock()
+{
+document.getElementById('rock').currentTime=0;
+if (house_a_tocar==0)
+	{
+	document.getElementById('rock').play();
+	house_a_tocar=1;
+	}
+else
+	{
+	document.getElementById('rock').pause();
+	house_a_tocar=0;
+	}
+}
+
+
+function Toca(event) 
+{
+    var key = event.keyCode;
+    
+    // Notas naturais
+    if (key == 65) donota();      // Tecla A = DO
+    if (key == 83) renota();      // Tecla S = RE
+    if (key == 68) minota();      // Tecla D = MI
+    if (key == 70) fanota();      // Tecla F = FA
+    if (key == 71) solnota();     // Tecla G = SOL
+    if (key == 72) lanota();      // Tecla H = LA
+    if (key == 74) sinota();      // Tecla J = SI
+    
+    // Notas sustenidas (linha de cima)
+    if (key == 87) dosnota();     // Tecla W = DO#
+    if (key == 69) resnota();     // Tecla E = RE#
+    if (key == 82) misnota();     // Tecla R = MI#
+    if (key == 84) fasnota();     // Tecla T = FA#
+    if (key == 89) solsnota();    // Tecla Y = SOL#
+    if (key == 85) lasnota();     // Tecla U = LA#
+    if (key == 73) sisnota();     // Tecla I = SI#
+    
+    // Oitava superior
+    if (key == 75) dobnota();     // Tecla K = DOB
+    if (key == 76) rebnota();     // Tecla L = REB
+    if (key == 186) mibnota();    // Tecla Ç = MIB
+    
+    // Músicas de fundo
+    if (key == 49) house();       // Tecla 1 = House
+    if (key == 50) rock();        // Tecla 2 = Rock
+}
+
+// Adicionar listener para capturar teclas do teclado
+document.addEventListener('keydown', Toca)
+
+var toca = 0; // Adicione esta variável no início do script
+
+function TocaAleatorio()
+{
+    if (toca == 1)
+    {
+        // Gera um número aleatório de 1 a 17 (correspondente aos 17 áudios)
+        var numeroAleatorio = Math.ceil(Math.random() * 17);
+        
+        // Toca o áudio correspondente
+        var audio = document.getElementById('a' + numeroAleatorio);
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+        
+        // Chama a função novamente após 1 segundo (1000ms)
+        setTimeout(TocaAleatorio, 1000);
+    }
+}
+
+function LancaAleatorio()
+{
+    if (toca == 0)
+    {
+        toca = 1;
+        TocaAleatorio();
+    }
+    else
+    {
+        toca = 0;
+    }
+}
+
+
+</script>
+</body>
+</html>
+

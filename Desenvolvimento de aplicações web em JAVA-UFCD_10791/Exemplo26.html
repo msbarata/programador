@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<body onload="inicializa()">
+<div id="janela" style="width:1500px;height:1000px">
+<br><p id="p1"></p>
+</div>
+<script>
+var x=0;
+var aumento=1;
+function inicializa()
+{
+setInterval(function(){actualiza()},10);//lança teporizador que chama atualiza() todos os 10ms
+}
+
+function actualiza()
+{
+x=x+aumento;// valor de x é incrementado com aumento, ou seja, +1
+
+document.getElementById("p1").innerHTML=x;//valor de x é apresentado no parágrafo
+
+}
+</sript></body></html>

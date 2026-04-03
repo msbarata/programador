@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="operando" onkeyUp="Incrementa()">
+<input id="operador" onkeyUp="Incrementa()">
+
+<p id="resultado"></p>
+<p id="resultado2"></p>
+<p id="resultado3"></p>
+<p id="resultado4"></p>
+
+<script>
+
+function Incrementa()
+{
+var texto=document.getElementById("operando").value;
+var texto2=document.getElementById("operador").value;
+
+var i=parseInt(texto);
+var j=parseInt(texto2);
+
+x=i+j;
+
+
+var texto=document.getElementById("operando").value;
+var texto2=document.getElementById("operador").value;
+
+var i=parseInt(texto);
+var j=parseInt(texto2);
+
+y=i-j;
+
+var texto=document.getElementById("operando").value;
+var texto2=document.getElementById("operador").value;
+
+var i=parseInt(texto);
+var j=parseInt(texto2);
+
+z=i*j;
+
+var texto=document.getElementById("operando").value;
+var texto2=document.getElementById("operador").value;
+
+var i=parseInt(texto);
+var j=parseInt(texto2);
+
+t=i/j;
+
+
+
+document.getElementById("resultado").innerHTML="valor soma: "+x;
+document.getElementById("resultado2").innerHTML="valor subtração: "+y;
+document.getElementById("resultado3").innerHTML="valor multiplicação: "+z;
+document.getElementById("resultado4").innerHTML="valor divisão: "+t;
+
+}
+</script>
+</body>
+</html>
+
