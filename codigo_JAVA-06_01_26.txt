@@ -1,0 +1,25 @@
+private void PopularComboBox() throws Exception
+    {
+    Connection x = DriverManager.getConnection("jdbc:mariadb://localhost:3306/?user=root");  
+ 
+    Statement stat1=x.createStatement();
+    ResultSet resultadoQuery=stat1.executeQuery("Select NIF,Nome From clinicaveterinaria.tutor");
+         //jComboBox1.addItem(" ");
+    while(resultadoQuery.next()) {
+    jComboBox1.addItem(resultadoQuery.getString("NIF")+"-"+resultadoQuery.getString("Nome"));
+    }   
+ 
+    Statement stat2=x.createStatement();
+    ResultSet resultadoQuery2=stat2.executeQuery("Select NomeRaca From clinicaveterinaria.raca");
+         //jComboBox1.addItem(" ");
+    while(resultadoQuery2.next()) {
+    jComboBox2.addItem(resultadoQuery2.getString("NomeRaca"));
+    }
+ 
+    resultadoQuery.close();
+    stat1.close();
+ 
+    resultadoQuery2.close();
+    stat2.close();
+    x.close();   
+    }
