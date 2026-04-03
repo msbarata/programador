@@ -99,21 +99,19 @@ def main():
     while True:
         opcao = int(input("Escolha uma das seguintes opções [1, 2, 3, ou 0 para sair]: "))
 #Uso do condicional if, para permitir escolha dentre duas opções de testes: (1)superclasse Servico ou (2)subclasse ReparacaoTelhado.
-#Caso escolhida a opção 1 - instância a superclasse - Servico e mostra os resultados de três métodos chamados:         
         if opcao == 1:
             print("\n--- TESTE: Serviço Internet ---\n")
             servico = Servico("Internet", "MEO", 175.00)
             print(servico.descricao_servico())
             print(f"O pagamento deste serviço a empresa {servico.empresa} já decorre: {servico.calcula_meses()} meses")
             print(f"O valor total pago ao serviço da empresa {servico.empresa} até presente data é de: {servico.calcula_valor_total()} Euros\n")
-#Caso escolhida a opção 2 - instância a subclasse ReparaçãoTelhado como 'telhado 1', mostra resultados de dois métodos chamados:        
+            
         elif opcao == 2:
             print("\n--- TESTE: Reparação de Telhado ---\n")
             telhado1 = ReparacaoTelhado("Telhado", "Repara Tudo S.A", 1000, 60, 60)
             print(f"O Valor total para a reparação do telhado pela empresa {telhado1.empresa} será de: {telhado1.calcula_valor_total()} Euros")
             print(f"O Status do serviço - reparo no telhado de 'Manoel' pela empresa {telhado1.empresa} é: {telhado1.verifica_garantia()}\n")
-#Caso escolhida a opção 3 - instância a subclasse ReparaçãoTelhado como 'telhado 2', obtêm metro quadrado do telhado,
-#calcula o tempo gasto para reparação do telhado, baseado no tamanho do seu metro quadrado: 
+
         elif opcao == 3:
             print("\n--- TESTE: Tempo Estimado para Reparação do Telhado ---\n")
     #Obter a área do telhado da subclasse ReparacaoTelhado
@@ -121,10 +119,10 @@ def main():
             m2 = telhado2.areaMetro2_telhado
     
     #Calcular o tempo estimado por m² (reparos extensos)
-    #0.12 dias por m² é um vaalor padrão estimado
+    #0.12 dias por m²
             tempo_por_m2 = 0.12
     
-    #Usar list compreehension para gerar lista de tempo para cada m² até chegar ao cálulo da área total
+    #Usar list compreehension para gerar lista de tempos para cada m² até a área total
             lq = [nr * tempo_por_m2 for nr in range(1, int(m2) + 1)]
 
     #Mostrar na tela a área do telhado em metros quadrados e o tempo previsto para conclusão do reparo
@@ -135,13 +133,11 @@ def main():
         elif opcao == 0:
             print("Volte sempre!!!")
             break
-  #Caso a opção escolhida pelo operador seja diferente de (1, 2, 3 ou 0)  - operador será informado da opção inválida 
-  #peritirár que se escolha uma novamente uma opção.       
+  #Caso a opção escolhida pelo operador seja diferente de (1, 2, 3 ou 0)  - ele será informado da opção inválida e poderá escolher novamente.       
         else:
             print("Opção inválida\n")
 
 #Chamada da função principal (MAIN). Local de inicialização de todo o programa.
-#Chamada de função utilizada para limpar a tela após encerramento do programa.
 
 main()
 limpar_tela()
