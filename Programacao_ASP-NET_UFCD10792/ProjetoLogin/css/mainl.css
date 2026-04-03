@@ -1,0 +1,114 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.corpo_forum{
+
+    margin: 20px auto;
+    padding: 20px;
+    width: 1000px;
+    max-width: 95%;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    background-color: rgb(235, 235, 245);
+    text-align: left;
+    border: 0px solid black;
+    border-radius: 0px;
+}
+
+.rodape{
+
+    margin: 10px auto;
+    padding: 20px;
+    width: 1000px;
+    max-width: 95%;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.form_login{
+    
+    width: 600px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(235, 235, 245);
+    border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.form_login h3{
+    display: flex;
+    align-items: center;
+   	justify-content: right;
+    gap: 130px; 
+    margin-bottom: 10px;
+    color: rgb(255, 20, 147);
+
+}
+
+.form_login h3 img {
+    width: 120px; /* ajusta o tamanho */
+}
+
+.form_login hr{
+    margin-bottom: 20px;
+
+}
+.form_login p{
+
+    font-size: 0.9em;
+    margin-bottom: 15px;
+
+}
+.form_login label{
+
+    display: block;
+    margin-top: 10px;
+   
+
+}
+.btn_login{
+
+    width: 100%;
+    padding: 10px; 
+    margin-top: 15px;
+    background-color: rgb(168, 80, 252);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn_login:hover{
+
+    background-color: #555555;
+
+}
+.form_login input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.form_login a{
+    color: #0066cc;
+    text-decoration: none;
+}
+.form_login a:hover{
+
+    text-decoration: underline;
+}
+   
+  
+
+
+
+

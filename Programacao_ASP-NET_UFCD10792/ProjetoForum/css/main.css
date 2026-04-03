@@ -1,0 +1,308 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.corpo_forum{
+
+    margin: 20px auto;
+    padding: 20px;
+    width: 1000px;
+    max-width: 95%;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    background-color: rgb(220, 220, 220);
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.rodape{
+
+    margin: 10px auto;
+    padding: 20px;
+    width: 1000px;
+    max-width: 95%;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.form_login, .form_signup{
+    
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.form_login h3, .form_signup h3{
+
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form_login hr, .form_signup hr{
+    margin-bottom: 20px;
+
+}
+.form_login p{
+
+    font-size: 0.9em;
+    margin-bottom: 15px;
+
+}
+.form_login label, .form_signup label{
+
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+.btn_login, .form_signup button{
+
+    width: 100%;
+    padding: 10px; 
+    margin-top: 15px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn_login:hover, .form_signup button:hover{
+
+    background-color: #555555;
+
+}
+.form_login input, .form_signup input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.form_login a, .form_signup a{
+    color: #0066cc;
+    text-decoration: none;
+}
+.form_login a:hover, .form_signup a:hover{
+
+    text-decoration: underline;
+}
+
+.erro{
+    width: 400%;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #FFDDDD;
+    color: #990000;
+    border: 1px solid #CC0000;
+    border-radius: 5px;
+    text-align: center;
+
+}
+   
+.novo_registo_sucesso, .login_sucesso{
+    width: 400%;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #DDFFDD;
+    color: #155724;
+    border: 1px solid #28A745;
+    border-radius: 5px;
+    text-align: center;
+}
+.mensagem{
+
+    width: 400px;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #E7F3FF;
+    color: #004085;
+    border: 1px solid #B8DAFF;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.dados_utilizador{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 8px; 
+    background-color: #FFFFFF;
+}
+.dados_utilizador img{
+   
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.dados_utilizador span{
+   
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.novo_post{
+   
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.novo_post a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.novo_post a:hover{
+    color: yellow;
+    
+}
+
+.form_post {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.form_post input[type="text"], .form_post textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.form_post textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form_post input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_post input[type="submit"]:hover{
+    background-color: #444444;
+}
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #DDDDDD;
+}
+.post img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #DDDDDD;
+}
+.post_conteudo{
+    flex: 1;
+}
+
+.post_username{
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+}
+
+.post_titulo{
+    font-size: 14px;
+    color: #777777;
+    margin-left: 10px;
+}
+ 
+.post_mensagem{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.post_data{
+    margin-top: 8px;
+    font-size: 11px;
+    color: #999999;
+}
+   
+.post_topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post_rodape {
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post_botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.btn_editar {
+    background-color: #E7F1FF;
+    color: #0045B3;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn_apagar {
+    background-color: #FFE7E7;
+    color: #B30000;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn_editar:hover {
+    background-color: #0045B3;
+    color: white;
+}
+
+.btn_apagar:hover {
+    background-color: #B30000;
+    color: white;
+}
+
+
+
