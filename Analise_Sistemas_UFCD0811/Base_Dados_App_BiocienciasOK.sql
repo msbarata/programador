@@ -1,0 +1,1 @@
+SELECT * FROM mydb.recursos_temas;
