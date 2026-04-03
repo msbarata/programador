@@ -1,0 +1,149 @@
+*EXERCÍCIO 1 - Lista Ligada (25 valores)
+Enunciado:
+Criar um sistema de gestão de playlist de música usando uma lista ligada. O programa deve:
+
+
+// ===== DEFINIÇÃO DE TIPOS E VARIÁVEIS GLOBAIS =====
+
+TIPO NÓ
+    dados: TEXTO
+    proximo: NÓ
+FIM TIPO
+
+DECLARE inicio: NÓ
+inicio = NULL
+
+// ===== PROCEDIMENTOS =====
+
+// Procedimento para inserir música no final da lista
+PROCEDIMENTO inserir_fim(musica: TEXTO)
+INÍCIO 
+    novo_no: NÓ
+    novo_no.dados = musica
+    novo_no.proximo = NULL
+    
+    SE (inicio = NULL) ENTÃO
+        inicio = novo_no
+    SENÃO
+        atual = inicio
+        ENQUANTO (atual.proximo ≠ NULL) FAÇA
+            atual = atual.proximo
+        FIM ENQUANTO
+        atual.proximo = novo_no
+    FIM SE
+    
+    ESCREVER "Musica '", musica, "' adicionada"
+FIM
+
+// Procedimento para mostrar todas as músicas
+PROCEDIMENTO mostrar_musica()
+INÍCIO
+    SE (inicio = NULL) ENTÃO
+        ESCREVER "Não há Músicas"
+        RETORNAR
+    FIM SE
+    
+    atual = inicio
+    contador = 1
+    ESCREVER "=== PLAYLIST ==="
+    ENQUANTO (atual ≠ NULL) FAÇA
+        ESCREVER contador, ".", atual.dados
+        atual = atual.proximo
+        contador = contador + 1
+    FIM ENQUANTO
+FIM
+
+// Procedimento para remover uma música específica
+PROCEDIMENTO remover_musica(musica: TEXTO)
+INÍCIO
+    SE (inicio = NULL) ENTÃO
+        ESCREVER "Lista de Músicas - vazia"
+        RETORNAR
+    FIM SE
+    
+    // Remover do início
+    SE (inicio.dados = musica) ENTÃO
+        temp = inicio
+        inicio = inicio.proximo
+        ESCREVER "Musica '", musica, "' removida"
+        RETORNAR
+    FIM SE
+    
+    // Procurar no resto da lista
+    atual = inicio
+    ENQUANTO (atual.proximo ≠ NULL E atual.proximo.dados ≠ musica) FAÇA
+        atual = atual.proximo
+    FIM ENQUANTO
+    
+    SE (atual.proximo ≠ NULL) ENTÃO
+        temp = atual.proximo
+        atual.proximo = temp.proximo
+        ESCREVER "Música '", musica, "' removida"
+    SENÃO
+        ESCREVER "Música '", musica, "' não encontrada"
+    FIM SE
+FIM
+
+// Procedimento para mostrar playlist atualizada
+PROCEDIMENTO mostrar_musica_atual()
+INÍCIO
+    SE (inicio = NULL) ENTÃO
+        ESCREVER "Não há Músicas"
+        RETORNAR
+    FIM SE
+    
+    atual = inicio
+    contador = 1
+    ESCREVER "=== PLAYLIST ATUALIZADA ==="
+    ENQUANTO (atual ≠ NULL) FAÇA
+        ESCREVER contador, ".", atual.dados
+        atual = atual.proximo
+        contador = contador + 1
+    FIM ENQUANTO
+FIM
+
+// Procedimento para contar total de músicas
+PROCEDIMENTO contar_musica()
+INÍCIO
+    SE (inicio = NULL) ENTÃO
+        ESCREVER "Não há Músicas"
+        RETORNAR
+    FIM SE
+    
+    atual = inicio
+    contador = 0
+    ENQUANTO (atual ≠ NULL) FAÇA
+        atual = atual.proximo
+        contador = contador + 1
+    FIM ENQUANTO
+    ESCREVER "Total de Músicas: ", contador
+FIM
+
+// ===== PROGRAMA PRINCIPAL =====
+
+INÍCIO
+    // 1. Adicionar músicas à playlist
+    inserir_fim("Bohemian Rhapsody")
+    inserir_fim("Imagine")
+    inserir_fim("Hotel California")
+    inserir_fim("Stairway to Heaven")
+    
+    // 2. Mostrar playlist inicial
+    mostrar_musica()
+    
+    // 3. Remover uma música
+    remover_musica("Imagine")
+    
+    // 4. Mostrar playlist atualizada
+    mostrar_musica_atual()
+    
+    // 5. Contar total de músicas
+    contar_musica()
+    
+FIM
+
+
+
+
+
+

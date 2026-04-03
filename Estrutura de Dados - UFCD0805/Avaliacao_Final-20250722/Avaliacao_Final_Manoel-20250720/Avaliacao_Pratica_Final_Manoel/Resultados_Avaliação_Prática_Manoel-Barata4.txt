@@ -1,0 +1,120 @@
+Enunciado:  Criar uma árvore binária para representar uma estrutura organizacional simples e implementar percursos. O programa deve:
+
+
+/ ===== DECLARAÇÕES GLOBAIS =====
+
+NÓ_ÁRVORE 
+    dados: TEXTO
+    esquerdo: PONTEIRO para NÓ_ÁRVORE
+    direito: PONTEIRO para NÓ_ÁRVORE
+
+
+// ===== PROCEDIMENTOS =====
+
+
+PROCEDIMENTO criar_no(valor): NÓ_ÁRVORE
+INÍCIO
+    novo_no: NÓ_ÁRVORE
+    novo_no.dados = valor
+    novo_no.esquerdo = NULL
+    novo_no.direito = NULL
+    RETORNAR novo_no
+FIM
+
+
+PROCEDIMENTO pre_ordem(no: PONTEIRO para NÓ_ÁRVORE)
+INÍCIO
+    SE (no ≠ NULL) ENTÃO
+        ESCREVER no.dados, ", "
+        pre_ordem(no.esquerdo)
+        pre_ordem(no.direito)
+    FIM SE
+FIM
+
+    
+ PROCEDIMENTO em_ordem_nums(no: PONTEIRO para NÓ_ÁRVORE)
+INÍCIO
+    SE (no ≠ NULL) ENTÃO
+        em_ordem_nums(no.esquerdo)
+        ESCREVER no.dados, ", "
+        em_ordem_nums(no.direito)
+    FIM SE
+FIM
+
+
+FUNÇÃO calcular_altura(no: PONTEIRO para NÓ_ÁRVORE): INTEIRO
+INÍCIO
+    SE (no = NULL) ENTÃO
+        RETORNAR -1  // Convenção: árvore vazia tem altura -1
+    FIM SE
+    
+    altura_esquerda = calcular_altura(no.esquerdo)
+    altura_direita = calcular_altura(no.direito)
+    
+    SE (altura_esquerda > altura_direita) ENTÃO
+        RETORNAR altura_esquerda + 1
+    SENÃO
+        RETORNAR altura_direita + 1
+    FIM SE
+FIM
+
+
+
+// ===== PROGRAMA PRINCIPAL =====
+
+    // 1 - Criar uma árvore com a seguinte estrutura:
+
+INÍCIO  
+
+    ESCREVER "=== ORGANIGRAMA ==="
+
+   // Criar os nós
+   
+   CEO = criar_no("CEO")
+   CTO = criar_no("CTO")
+   CFO = criar_no("CFO")
+   Dev_MGR = criar_no("Dev MGR")
+   QA_Mgr = criar_no("QA Mgr")
+
+  // Conectar a árvore
+
+  CEO.esquerdo = CTO
+  CEO.direito = CFO
+  CTO.esquerdo = Dev_MGR
+  CTO.direito = QA_Mgr
+
+ // Desenhar árvore no output
+
+       ESCREVER "Árvore criada:"
+    ESCREVER "       CEO  "
+    ESCREVER "       / \"
+    ESCREVER "      /   \"
+    ESCREVER "    CTO   CFO"
+    ESCREVER "    / \"
+    ESCREVER "   /   \"
+    ESCREVER "DevMgr QAMgr"
+
+    
+    // 2) Implementar o percurso pré-ordem e mostrar a hierarquia:
+
+  
+    ESCREVER "Percurso pré-ordem (hierarquia): "
+    pre_ordem(CEO)
+
+  // 3) Implementar o percurso em-ordem e mostrar a sequência:
+    
+    ESCREVER "Percurso em-ordem: "
+    ESCREVER""
+    em_ordem_nums(CEO)
+ 
+	
+  // 4) Calcular e mostrar a altura da árvore::
+
+    altura_total = calcular_altura(CEO)
+    ESCREVER "Altura da árvore:", altura_total, "níveis"
+
+    FIM
+
+
+
+
