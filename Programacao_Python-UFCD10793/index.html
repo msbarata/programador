@@ -133,6 +133,45 @@
       max-width: 560px;
     }
 
+    /* ── CONTEÚDOS DA DISCIPLINA ── */
+    .syllabus {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(200,223,240,0.12);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      max-width: 720px;
+    }
+    .syllabus-title {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--beige-accent);
+      margin-bottom: 14px;
+    }
+    .syllabus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px 24px;
+    }
+    .syllabus-topic {
+      font-size: 0.8rem;
+      color: rgba(200,223,240,0.65);
+      font-weight: 300;
+      line-height: 1.5;
+      padding-left: 10px;
+      border-left: 2px solid rgba(74,143,190,0.3);
+    }
+    .syllabus-topic strong {
+      display: block;
+      color: rgba(200,223,240,0.9);
+      font-weight: 500;
+      margin-bottom: 2px;
+      font-size: 0.78rem;
+    }
+
     /* ── MAIN ── */
     main {
       max-width: 900px;
@@ -199,13 +238,15 @@
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
-      font-size: 16px;
+      font-size: 11px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
     }
-    .file-icon.pdf  { background: #FDECEA; color: #C0392B; }
-    .file-icon.docx { background: #E8F0FE; color: #1A4A72; }
-    .file-icon.py   { background: #E8F5E9; color: #2E7D32; }
-    .file-icon.html { background: #FFF3E0; color: #E65100; }
-    .file-icon.folder { background: var(--blue-lightest, #EBF4FA); color: var(--blue-muted); }
+    .file-icon.pdf    { background: #FDECEA; color: #C0392B; }
+    .file-icon.docx   { background: #E8F0FE; color: #1A4A72; }
+    .file-icon.py     { background: #E8F5E9; color: #2E7D32; }
+    .file-icon.ipynb  { background: #FFF8E1; color: #F57F17; }
     .file-icon.other  { background: var(--gray-surface); color: var(--gray-mid); }
 
     .file-info { flex: 1; min-width: 0; }
@@ -232,13 +273,6 @@
       display: flex; align-items: center; gap: 5px;
     }
     .file-action svg { width: 13px; height: 13px; }
-
-    /* ── PASTA/SUBPASTA ── */
-    .folder-item {
-      background: var(--gray-surface);
-      border-color: var(--gray-border);
-    }
-    .folder-item .file-name { color: var(--blue-mid); }
 
     /* ── GITHUB LINK ── */
     .github-btn {
@@ -291,6 +325,7 @@
     @media (max-width: 640px) {
       .topbar, header, main { padding-left: 24px; padding-right: 24px; }
       footer { padding: 16px 24px; }
+      .syllabus-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -312,18 +347,50 @@
     <p class="header-desc">
       Materiais, atividades e exercícios desenvolvidos ao longo da disciplina de Programação Python — Técnico em Programação, nível 4.
     </p>
+
+    <div class="syllabus">
+      <div class="syllabus-title">Conteúdos Programáticos</div>
+      <div class="syllabus-grid">
+        <div class="syllabus-topic">
+          <strong>Introdução ao Python</strong>
+          Definição e vantagens · Diferenças entre versões
+        </div>
+        <div class="syllabus-topic">
+          <strong>Ambientes de Desenvolvimento</strong>
+          Anaconda · Spyder · VS Code · Jupyter Notebook
+        </div>
+        <div class="syllabus-topic">
+          <strong>Utilizações de Python</strong>
+          Tratamento de dados (TEXTO, CSV, SQL, XLS) · Listas, variáveis e dicionários · Controlo do programa (for, while, if) · Ficheiros e iteradores
+        </div>
+        <div class="syllabus-topic">
+          <strong>Performance</strong>
+          Benchmark · Profilers de memória e CPU · Widgets · Geradores
+        </div>
+        <div class="syllabus-topic">
+          <strong>Conceitos de Programação</strong>
+          Tipos de dados · Programação condicional · Funções · Iterações · Classes (construtores, métodos, herança, decoradores)
+        </div>
+        <div class="syllabus-topic">
+          <strong>Bibliotecas</strong>
+          Pandas · NumPy · Matplotlib · Importação SQL/CSV · Testes unitários
+        </div>
+        <div class="syllabus-topic">
+          <strong>Projeto Final</strong>
+          Projeto de programação integrador
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
 
-  
-  <!-- ══ FICHEIROS SOLTOS ══ -->
+  <!-- ══ PDFs ══ -->
   <div class="section">
-    <div class="section-title">Documentos &amp; Ficheiros</div>
+    <div class="section-title">Documentos PDF</div>
     <div class="file-list">
 
-      <!-- PDF -->
       <a class="file-item" href="Exercicio2Fudamentos-PythonManoelBarata.pdf" target="_blank">
         <div class="file-icon pdf">PDF</div>
         <div class="file-info">
@@ -336,7 +403,7 @@
         </div>
       </a>
 
-       <a class="file-item" href="Reflexão_UFCD_10793 Manoel-Barata_signed.pdf" target="_blank">
+      <a class="file-item" href="Reflexão_UFCD_10793 Manoel-Barata_signed.pdf" target="_blank">
         <div class="file-icon pdf">PDF</div>
         <div class="file-info">
           <div class="file-name">Reflexão_UFCD_10793 Manoel-Barata_signed.pdf</div>
@@ -347,8 +414,15 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </a>
-     
-      <!-- DOCX — não abre direto no browser, redireciona para GitHub -->
+
+    </div>
+  </div>
+
+  <!-- ══ DOCX ══ -->
+  <div class="section">
+    <div class="section-title">Documentos Word</div>
+    <div class="file-list">
+
       <a class="file-item" href="https://github.com/msbarata/programador/raw/main/Programacao_Python-UFCD10793/Exercicio2Fudamentos-Python.docx" target="_blank">
         <div class="file-icon docx">DOC</div>
         <div class="file-info">
@@ -360,7 +434,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </div>
       </a>
-      
 
       <a class="file-item" href="https://github.com/msbarata/programador/raw/main/Programacao_Python-UFCD10793/LinguagemPythonAnotacoes.docx" target="_blank">
         <div class="file-icon docx">DOC</div>
@@ -375,11 +448,267 @@
       </a>
 
     </div>
+  </div>
+
+  <!-- ══ JUPYTER NOTEBOOKS ══ -->
+  <div class="section">
+    <div class="section-title">Jupyter Notebooks</div>
+    <div class="file-list">
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/aula2_notebk.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">aula2_notebk.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Aula 2</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/aula3_notebk.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">aula3_notebk.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Aula 3</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/aula5_notebk.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">aula5_notebk.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Aula 5</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/aula6_notebk.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">aula6_notebk.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Aula 6</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/aula7_notebk.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">aula7_notebk.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Aula 7</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio2ManoelBarata.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio2ManoelBarata.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Exercício 2</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio3ManoelBarata.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio3ManoelBarata.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Exercício 3</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio4ManoelBarata.ipynb" target="_blank">
+        <div class="file-icon ipynb">IPYNB</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio4ManoelBarata.ipynb</div>
+          <div class="file-meta">Jupyter Notebook · Exercício 4</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══ PYTHON ══ -->
+  <div class="section">
+    <div class="section-title">Scripts Python</div>
+    <div class="file-list">
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/script_aula2.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">script_aula2.py</div>
+          <div class="file-meta">Script Python · Aula 2</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio3_manoelbarata_parte1.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio3_manoelbarata_parte1.py</div>
+          <div class="file-meta">Script Python · Exercício 3 — Parte 1</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio3_manoelbarata_parte2.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio3_manoelbarata_parte2.py</div>
+          <div class="file-meta">Script Python · Exercício 3 — Parte 2</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio4_manoelbarata.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio4_manoelbarata.py</div>
+          <div class="file-meta">Script Python · Exercício 4</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Exercicio4_manoelbarata_parte1.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">Exercicio4_manoelbarata_parte1.py</div>
+          <div class="file-meta">Script Python · Exercício 4 — Parte 1</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/exercicioPandas_manoelbarata_parte1.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">exercicioPandas_manoelbarata_parte1.py</div>
+          <div class="file-meta">Script Python · Exercício Pandas — Parte 1</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/exercicioPandas_manoelbarata_parte2.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">exercicioPandas_manoelbarata_parte2.py</div>
+          <div class="file-meta">Script Python · Exercício Pandas — Parte 2</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/exercicioPandas-Arquivo_manoelbarata_parte3.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">exercicioPandas-Arquivo_manoelbarata_parte3.py</div>
+          <div class="file-meta">Script Python · Exercício Pandas/Arquivo — Parte 3</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/exercicioPandas-Arquivo_manoelbarata_parte4.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">exercicioPandas-Arquivo_manoelbarata_parte4.py</div>
+          <div class="file-meta">Script Python · Exercício Pandas/Arquivo — Parte 4</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/exercicioPandas-Arquivo_manoelbarata_parte5.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">exercicioPandas-Arquivo_manoelbarata_parte5.py</div>
+          <div class="file-meta">Script Python · Exercício Pandas/Arquivo — Parte 5</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/Untitled-1.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">Untitled-1.py</div>
+          <div class="file-meta">Script Python</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a class="file-item" href="https://github.com/msbarata/programador/blob/main/Programacao_Python-UFCD10793/teste.py" target="_blank">
+        <div class="file-icon py">.py</div>
+        <div class="file-info">
+          <div class="file-name">teste.py</div>
+          <div class="file-meta">Script Python</div>
+        </div>
+        <div class="file-action">
+          Ver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+    </div>
 
     <!-- Botão para ver TUDO no GitHub -->
     <a class="github-btn" href="https://github.com/msbarata/programador/tree/main/Programacao_Python-UFCD10793" target="_blank">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-      Ver repositório completo no GitHub
+      Ver pasta completa no GitHub
     </a>
   </div>
 
