@@ -1,0 +1,8 @@
+String nomeDoFicheiro="0.jpg";
+
+if (jComboBox1.getSelectedIndex()==1)
+nomeDoFicheiro="1.jpg";
+if (jComboBox1.getSelectedIndex()==2)
+nomeDoFicheiro="2.jpg";
+
+jLabelPrato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exemplo18_combobox/"NomedoFicheiro)));

@@ -1,0 +1,124 @@
+    //SQL Server
+
+    //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+    //Connection SQlCnn = DriverManager.getConnection("jdbc:sqlserver://localhost\\SQLEXPRESS:52836;user=java; password=java");
+
+    //XAMPP
+
+    Connection SQlCnn = DriverManager.getConnection("jdbc:mariadb://localhost:3307/?user=root");  
+
+    //Mysql
+
+    //Connection SQlCnn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","123456");  
+
+    System.out.print("Ligação com sucesso");
+
+ 
+    } catch (Exception Ex)
+
+            {
+
+            System.out.println("Mariadb Server - problema:"+Ex);
+
+            }  
+ 
+
+
+
+String campo1=jTextField1.getText();
+     String campo2=jTextField2.getText();
+     String campo3=jTextArea1.getText();
+
+
+
+//SQL Server
+     //PreparedStatement stat1=SQlCnn.prepareStatement("insert into utentes.dbo.dadosutentes values(?,?,?)");
+     //XAMPP
+     PreparedStatement stat1=SQlCnn.prepareStatement("insert into utentes.dadosutentes values(?,?,?)");
+     //MySql
+     //PreparedStatement stat1=SQlCnn.prepareStatement("insert into utentes.dadosutentes values(?,?,?)");
+
+
+
+stat1.setString(1, campo1);
+     stat1.setString(2, campo2);
+     stat1.setString(3, campo3);
+
+
+stat1.executeUpdate();
+
+stat1.close();
+     SQlCnn.close();
+
+
+//SQL Server
+   //ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dbo.dadosutentes");
+   //XAMPP
+   ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dadosutentes");
+   //Mysql
+   //ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dadosutentes");
+
+
+String texto="";
+   while(resultadoQuery.next()) 
+          texto= texto + resultadoQuery.getString("niss")
+                  + "\t"+ resultadoQuery.getString("Nome")
+                  +"\n";
+   jTextArea1.setText(texto);       
+     //texto=texto.replaceAll("null","  ");
+   SQlCnn.close();
+
+
+ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dadosutentes where nome like '%"+jTextField1.getText()+"%'");
+
+
+//CREATE DATABASE utentes CREATE TABLE utentes.dadosutentes (NISS varchar(20) PRIMARY KEY, Nome varchar(20), Morada varchar(100) )
+
+
+  try {
+     //SQL Server
+    //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+    //Connection SQlCnn = DriverManager.getConnection("jdbc:sqlserver://localhost\\SQLEXPRESS:52836;user=java; password=java");
+    //XAMPP
+    Connection SQlCnn = DriverManager.getConnection("jdbc:mariadb://localhost:3307/?user=root");  
+    //Mysql
+    //Connection SQlCnn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","123456");  
+   System.out.print("Ligação com sucesso");
+   Statement stat1 = SQlCnn.createStatement();
+
+
+   //SQL Server
+   //ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dbo.dadosutentes");
+   //XAMPP
+   ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dadosutentes");
+   //Mysql
+   //ResultSet resultadoQuery = stat1.executeQuery("Select * From utentes.dadosutentes");
+
+
+   String texto="";
+   while(resultadoQuery.next()) 
+          texto= texto + resultadoQuery.getString("niss")
+                  + "\t"+ resultadoQuery.getString("Nome")
+                  +"\n";
+   jTextArea1.setText(texto);       
+     //texto=texto.replaceAll("null","  ");
+   SQlCnn.close();
+
+    }catch (Exception CnnErr)
+            {
+            System.out.print("Mariadb Server - problema:"+CnnErr);
+            }
+
+
+jComboBox1.addItem(resultadoQuery.getString("NIF")+"-"+resultadoQuery.getString("Nome"));
+
+
+
+
+
+
+
+
+
+
