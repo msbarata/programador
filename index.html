@@ -365,6 +365,9 @@
     main .card:nth-child(19) { animation-delay: 0.76s; }
     main .card:nth-child(20) { animation-delay: 0.80s; }
     main .card:nth-child(21) { animation-delay: 0.84s; }
+    main .card:nth-child(22) { animation-delay: 0.88s; }
+    main .card:nth-child(23) { animation-delay: 0.92s; }
+    main .card:nth-child(24) { animation-delay: 0.96s; }
 
     .card.hidden { display: none; }
 
@@ -414,7 +417,7 @@
   <div class="section-bar-inner">
     <h3>Materiais &amp; Códigos por Disciplina</h3>
     <div class="section-bar-line"></div>
-    <span class="section-bar-count">21 repositórios</span>
+    <span class="section-bar-count" id="repo-count">27 repositórios</span>
   </div>
 </div>
 
@@ -429,14 +432,16 @@
 
 <main id="grid">
 
+  <!-- ── EXISTING ENTRIES (Testa Códigos, Power BI, PRA removed) ── -->
+
   <div class="card" data-type="disc" data-search="vb net ufcd3934">
     <div class="card-badge">Disciplina</div>
     <div class="card-code">UFCD 3934</div>
     <div class="card-title">VB.NET</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/VB-NET_UFCD3934" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="utilitários ufcd0798">
@@ -444,19 +449,9 @@
     <div class="card-code">UFCD 0798</div>
     <div class="card-title">Utilitários</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Utilitarios-UFCD0798" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-  </div>
-
-  <div class="card" data-type="util" data-search="testa codigos">
-    <div class="card-badge">Utilitário</div>
-    <div class="card-code">—</div>
-    <div class="card-title">Testa Códigos</div>
-    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/TestaCodigos" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="sistemas redes local ufcd0799">
@@ -464,9 +459,9 @@
     <div class="card-code">UFCD 0799</div>
     <div class="card-title">Sistemas de Redes Local</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Sistemas_Redes_Local_UFCD0799" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="sistemas operativos ufcd0797">
@@ -474,9 +469,9 @@
     <div class="card-code">UFCD 0797</div>
     <div class="card-title">Sistemas Operativos</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Sistemas_Operativos_UFCD0797" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="serviços adicionais redes ufcd0800">
@@ -484,9 +479,9 @@
     <div class="card-code">UFCD 0800</div>
     <div class="card-title">Serviços Adicionais de Redes</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Servicos_Adicionais_Redes-UFCD0800" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="segurança desenvolvimento software ufcd10795">
@@ -494,19 +489,9 @@
     <div class="card-code">UFCD 10795</div>
     <div class="card-title">Segurança no Desenvolvimento de Software</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Seguranca-Desenvolvimento_Software_UFCD10795" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-  </div>
-
-  <div class="card" data-type="disc" data-search="power bi antonio matias">
-    <div class="card-badge">Disciplina</div>
-    <div class="card-code">Power BI</div>
-    <div class="card-title">Power BI — António Matias</div>
-    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Prower_BI-Antonio_Matias" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="proteção dados pessoais ufcd10672">
@@ -514,9 +499,9 @@
     <div class="card-code">UFCD 10672</div>
     <div class="card-title">Proteção de Dados Pessoais</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Protecao_Dados_Pessoais-UFCD10672" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="projeto programação ufcd10790">
@@ -524,9 +509,9 @@
     <div class="card-code">UFCD 10790</div>
     <div class="card-title">Projeto de Programação</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Projeto_Programacao_UFCD10790" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação sql ufcd0814">
@@ -534,9 +519,9 @@
     <div class="card-code">UFCD 0814</div>
     <div class="card-title">Programação SQL</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_SQL_UFCD0814" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação python ufcd10793">
@@ -544,9 +529,9 @@
     <div class="card-code">UFCD 10793</div>
     <div class="card-title">Programação Python</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_Python-UFCD10793" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação python avançado ufcd10794">
@@ -554,9 +539,9 @@
     <div class="card-code">UFCD 10794</div>
     <div class="card-title">Programação Python Avançado</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_Python_Avancado-UFCD10794" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação java ufcd0816">
@@ -564,9 +549,9 @@
     <div class="card-code">UFCD 0816</div>
     <div class="card-title">Programação JAVA</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_JAVA_UFCD0816" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação c c++ ufcd0809">
@@ -574,9 +559,9 @@
     <div class="card-code">UFCD 0809</div>
     <div class="card-title">Programação C / C++</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_C-C++UFCD0809" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação c# ufcd3935">
@@ -584,9 +569,9 @@
     <div class="card-code">UFCD 3935</div>
     <div class="card-title">Programação C#</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_C%23UFCD3935" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="programação asp net ufcd10792">
@@ -594,9 +579,9 @@
     <div class="card-code">UFCD 10792</div>
     <div class="card-title">Programação ASP.NET</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Programacao_ASP-NET_UFCD10792" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="processamento computacional ufcd0802">
@@ -604,19 +589,9 @@
     <div class="card-code">UFCD 0802</div>
     <div class="card-title">Processamento Computacional</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Processamento_Computacional_UFCD0802" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-  </div>
-
-  <div class="card" data-type="pra" data-search="pra antonio travessa">
-    <div class="card-badge">PRA</div>
-    <div class="card-code">PRA</div>
-    <div class="card-title">PRA — António Travessa</div>
-    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/PRA-Antonio_Travessa" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="plano negócios ufcd7854">
@@ -624,9 +599,9 @@
     <div class="card-code">UFCD 7854</div>
     <div class="card-title">Plano de Negócios</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Plano_Negocios_UFCD7854" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
   <div class="card" data-type="disc" data-search="metodologia programação ufcd0806">
@@ -634,9 +609,101 @@
     <div class="card-code">UFCD 0806</div>
     <div class="card-title">Metodologia de Programação</div>
     <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Metodologia_Programacao_UFCD0806" target="_blank">
-        Aceder ao repositório
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- ── NEW ENTRIES ── -->
+
+  <div class="card" data-type="disc" data-search="desenvolvimento aplicações web java ufcd10791">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 10791</div>
+    <div class="card-title">Desenvolvimento de Aplicações Web em JAVA</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Desenvolvimento_Aplicacoes_Web_JAVA_UFCD10791" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="dispositivos periféricos ufcd770">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 770</div>
+    <div class="card-title">Dispositivos &amp; Periféricos</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Dispositivos%26Perifericos-UFCD770" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="estrutura dados ufcd0805">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 0805</div>
+    <div class="card-title">Estrutura de Dados</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Estrutura_de_Dados-UFCD0805" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="fundamentos linguagens sql ufcd10788">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 10788</div>
+    <div class="card-title">Fundamentos Linguagens SQL</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Fundamentos_Linguagens_SQL_UFCD10788" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="fundamentos conexões rede ufcd771">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 771</div>
+    <div class="card-title">Fundamentos — Conexões de Rede</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Fundamentos-Conexoes_Rede-UFCD771" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="informática básica ufcd7846">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 7846</div>
+    <div class="card-title">Informática Básica</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Informatica_Basica_UFCD7846" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="análise sistemas ufcd0811">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 0811</div>
+    <div class="card-title">Análise de Sistemas</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Analise_Sistemas_UFCD0811" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="algoritmos ufcd0804">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 0804</div>
+    <div class="card-title">Algoritmos</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Algoritmos_UFCD0804" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <div class="card" data-type="disc" data-search="administração redes locais ufcd0801">
+    <div class="card-badge">Disciplina</div>
+    <div class="card-code">UFCD 0801</div>
+    <div class="card-title">Administração de Redes Locais</div>
+    <a class="card-link" href="https://github.com/msbarata/programador/tree/main/Administracao_Redes_Locais_UFCD0801" target="_blank">
+      Aceder ao repositório
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 
 </main>
@@ -649,15 +716,22 @@
 <script>
   const searchInput = document.getElementById('search');
   const cards = document.querySelectorAll('.card');
+  const countEl = document.getElementById('repo-count');
+
+  function updateCount() {
+    const visible = document.querySelectorAll('.card:not(.hidden)').length;
+    countEl.textContent = visible + ' repositório' + (visible !== 1 ? 's' : '');
+  }
+
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
     cards.forEach(card => {
       const text = (card.dataset.search || '') + ' ' + card.innerText.toLowerCase();
       card.classList.toggle('hidden', query.length > 0 && !text.includes(query));
     });
+    updateCount();
   });
 </script>
 
 </body>
 </html>
-
