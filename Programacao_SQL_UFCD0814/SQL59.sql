@@ -1,1 +1,0 @@
-SELECT DISTINCT Sigla_Hotel FROM Quarto;
