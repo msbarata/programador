@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programação C/C++ — UFCD 0809</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Jost:wght@200;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --blue-deep:    #0D2B45;
+      --blue-mid:     #1A4A72;
+      --blue-muted:   #2E6A9E;
+      --blue-soft:    #4A8FBE;
+      --blue-pale:    #C8DFF0;
+      --gray-dark:    #2D3136;
+      --gray-mid:     #5A6270;
+      --gray-light:   #9AA3AE;
+      --gray-border:  #D5D9DF;
+      --gray-surface: #F2F3F5;
+      --beige-warm:   #F8F4EE;
+      --beige-accent: #C4A882;
+      --white:        #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--beige-warm);
+      color: var(--gray-dark);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--blue-mid), var(--beige-accent), var(--blue-deep));
+      z-index: 10;
+    }
+
+    .topbar {
+      background: var(--blue-deep);
+      padding: 14px 48px 14px 60px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .topbar a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      color: var(--blue-pale);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .topbar a:hover { opacity: 1; }
+    .topbar-sep {
+      color: rgba(200,223,240,0.35);
+      font-size: 0.78rem;
+    }
+    .topbar-current {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      color: var(--beige-accent);
+    }
+
+    header {
+      background: var(--blue-deep);
+      padding: 40px 48px 40px 60px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--blue-mid);
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      border: 30px solid rgba(74,143,190,0.10);
+      pointer-events: none;
+    }
+
+    .header-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--beige-accent);
+      margin-bottom: 14px;
+    }
+    .header-badge::before {
+      content: '';
+      display: block;
+      width: 5px; height: 5px;
+      background: var(--beige-accent);
+      transform: rotate(45deg);
+    }
+
+    .header-code {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--blue-soft);
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .header-desc {
+      font-size: 0.92rem;
+      color: rgba(200,223,240,0.7);
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .syllabus {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(200,223,240,0.12);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      max-width: 720px;
+    }
+    .syllabus-title {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--beige-accent);
+      margin-bottom: 14px;
+    }
+    .syllabus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px 24px;
+    }
+    .syllabus-topic {
+      font-size: 0.8rem;
+      color: rgba(200,223,240,0.65);
+      font-weight: 300;
+      line-height: 1.5;
+      padding-left: 10px;
+      border-left: 2px solid rgba(74,143,190,0.3);
+    }
+    .syllabus-topic strong {
+      display: block;
+      color: rgba(200,223,240,0.9);
+      font-weight: 500;
+      margin-bottom: 2px;
+      font-size: 0.78rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 48px 80px 60px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      animation: riseIn 0.5s ease both;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blue-muted);
+      margin-bottom: 14px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-border);
+    }
+
+    .file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .file-item {
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
+    }
+    .file-item:hover {
+      border-color: var(--blue-pale);
+      box-shadow: 0 4px 16px rgba(13,43,69,0.08);
+      transform: translateX(3px);
+    }
+
+    .file-icon {
+      width: 36px; height: 36px;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .file-icon.pdf    { background: #FDECEA; color: #C0392B; }
+    .file-icon.docx   { background: #E8F0FE; color: #1A4A72; }
+    .file-icon.c      { background: #FFF8E1; color: #F57F17; }
+    .file-icon.cpp    { background: #E8F5E9; color: #2E7D32; }
+    .file-icon.other  { background: var(--gray-surface); color: var(--gray-mid); }
+
+    .file-info { flex: 1; min-width: 0; }
+    .file-name {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--blue-deep);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .file-meta {
+      font-size: 0.76rem;
+      color: var(--gray-light);
+      margin-top: 2px;
+    }
+
+    .file-action {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--blue-muted);
+      white-space: nowrap;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .file-action svg { width: 13px; height: 13px; }
+
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 28px;
+      background: var(--blue-deep);
+      color: var(--blue-pale);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      padding: 11px 22px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .github-btn:hover { background: var(--blue-mid); color: var(--white); }
+    .github-btn svg { width: 16px; height: 16px; }
+
+    footer {
+      background: var(--blue-deep);
+      padding: 20px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    footer p {
+      font-size: 0.78rem;
+      color: rgba(200,223,240,0.4);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    footer .footer-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.9rem;
+      color: rgba(200,223,240,0.6);
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .topbar, header, main { padding-left: 24px; padding-right: 24px; }
+      footer { padding: 16px 24px; }
+      .syllabus-grid { grid-template-columns: 1fr; }
+    }
+
+    .badge-c {
+      display: inline-block;
+      background: rgba(245, 127, 23, 0.15);
+      border: 1px solid rgba(245, 127, 23, 0.3);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #F57F17;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+    <a href="https://msbarata.github.io/programador/index.html">E-Portfólio</a>
+    <span class="topbar-sep">/</span>
+    <span class="topbar-current">Programação C/C++ — UFCD 0809</span>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="header-badge">Disciplina</div>
+    <div class="header-code">UFCD 0809</div>
+    <h1>Programação C / C++</h1>
+    <p class="header-desc">
+      Materiais, atividades e exercícios desenvolvidos ao longo da disciplina de Programação C/C++ — Técnico em Programação, nível 4.
+    </p>
+
+    <div class="syllabus">
+      <div class="syllabus-title">Conteúdos Programáticos</div>
+      <div class="syllabus-grid">
+        <div class="syllabus-topic"><strong>Estrutura do Programa</strong> Função main(), bibliotecas (#include) <span class="badge-c">C/C++</span></div>
+        <div class="syllabus-topic"><strong>Dados em C/C++</strong> Variáveis, constantes, tipos fundamentais (int, char, float, double)</div>
+        <div class="syllabus-topic"><strong>Entrada e Saída</strong> Funções printf() e scanf()</div>
+        <div class="syllabus-topic"><strong>Operadores</strong> Aritméticos, lógicos e relacionais</div>
+        <div class="syllabus-topic"><strong>Estruturas de Controlo</strong> Condicionais (if, else, switch) e Ciclos (for, while, do-while)</div>
+        <div class="syllabus-topic"><strong>Manipulação de Ficheiros</strong> Ponteiros FILE*, leitura/escrita em arquivos</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══ CÓDIGOS FONTE · C ══ -->
+  <div class="section">
+    <div class="section-title">Códigos Fonte · C</div>
+    <div class="file-list">
+
+      <a class="file-item" href="Atividade1-ManoelBarata.c" target="_blank">
+        <div class="file-icon c">C</div>
+        <div class="file-info"><div class="file-name">Atividade1-ManoelBarata.c</div><div class="file-meta">Atividade 1 · C</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="Codigopapeltesoura.c" target="_blank">
+        <div class="file-icon c">C</div>
+        <div class="file-info"><div class="file-name">Codigopapeltesoura.c</div><div class="file-meta">Jogo · Pedra Papel Tesoura</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="Projeto_Final_C_Manoel-Barata.c" target="_blank">
+        <div class="file-icon c">C</div>
+        <div class="file-info"><div class="file-name">Projeto_Final_C_Manoel-Barata.c</div><div class="file-meta">Projeto Final · C</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="canivete-suico_Manoel-Barata.c" target="_blank">
+        <div class="file-icon c">C</div>
+        <div class="file-info"><div class="file-name">canivete-suico_Manoel-Barata.c</div><div class="file-meta">Canivete Suíço · C</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══ CÓDIGOS FONTE · C++ ══ -->
+  <div class="section">
+    <div class="section-title">Códigos Fonte · C++</div>
+    <div class="file-list">
+
+      <a class="file-item" href="Desafio_Funcoes_Manoel-Barata.cpp" target="_blank">
+        <div class="file-icon cpp">CPP</div>
+        <div class="file-info"><div class="file-name">Desafio_Funcoes_Manoel-Barata.cpp</div><div class="file-meta">Desafio · Funções · C++</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="ProjetoFinal_04-12-25.cpp" target="_blank">
+        <div class="file-icon cpp">CPP</div>
+        <div class="file-info"><div class="file-name">ProjetoFinal_04-12-25.cpp</div><div class="file-meta">Projeto Final · 04/12/2025 · C++</div></div>
+        <div class="file-action">Ver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══ DOCUMENTOS PDF ══ -->
+  <div class="section">
+    <div class="section-title">Documentos PDF</div>
+    <div class="file-list">
+
+      <a class="file-item" href="Atividade1_C_Manoel-Barata.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">Atividade1_C_Manoel-Barata.pdf</div><div class="file-meta">Atividade 1 · PDF</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="Desafio_Funcao_Papel-Tesoura-Manoel.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">Desafio_Funcao_Papel-Tesoura-Manoel.pdf</div><div class="file-meta">Desafio · Função Papel-Tesoura</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="ProjetoFinalC++04-12-25.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">ProjetoFinalC++04-12-25.pdf</div><div class="file-meta">Projeto Final · C++ · PDF</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="Projeto_Final_C_Manoel-Barata.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">Projeto_Final_C_Manoel-Barata.pdf</div><div class="file-meta">Projeto Final · C · PDF</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="canivete-suico_Manoel-Barata.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">canivete-suico_Manoel-Barata.pdf</div><div class="file-meta">Canivete Suíço · PDF</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <a class="file-item" href="canivete-suico_Manoel-Barata13-10-25.pdf" target="_blank">
+        <div class="file-icon pdf">PDF</div>
+        <div class="file-info"><div class="file-name">canivete-suico_Manoel-Barata13-10-25.pdf</div><div class="file-meta">Canivete Suíço · 13/10/2025</div></div>
+        <div class="file-action">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══ DOCUMENTOS WORD ══ -->
+  <div class="section">
+    <div class="section-title">Documentos Word</div>
+    <div class="file-list">
+
+      <a class="file-item" href="Entrevista_emprego.docx" target="_blank">
+        <div class="file-icon docx">DOC</div>
+        <div class="file-info"><div class="file-name">Entrevista_emprego.docx</div><div class="file-meta">Entrevista de Emprego</div></div>
+        <div class="file-action">Download <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Botão para ver TUDO no GitHub -->
+  <a class="github-btn" href="https://github.com/msbarata/programador/tree/main/Programacao_C-C%2B%2BUFCD0809" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+    Ver pasta completa no GitHub
+  </a>
+
+</main>
+
+<footer>
+  <span class="footer-brand">Manoel Silva Barata</span>
+  <p>msbarata / programador · Repositório GitHub · Formação Profissional</p>
+</footer>
+
+</body>
+</html>
