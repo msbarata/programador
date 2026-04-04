@@ -1,1 +1,0 @@
-SELECT * FROM Factura WHERE Valor_Factura IS NULL OR Valor_Factura = 0;
