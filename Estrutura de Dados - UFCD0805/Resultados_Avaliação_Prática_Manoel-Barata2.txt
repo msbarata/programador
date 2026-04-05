@@ -1,0 +1,119 @@
+EXERCÍCIO 2 - Fila (25 valores)
+Enunciado:
+Simular um sistema de drive-thru de um restaurante fast-food. O programa deve:
+
+
+/ ===== DECLARAÇÕES GLOBAIS =====
+MAX_TAM ← 10
+Fila: ARRAY[0..9] DE INTEIRO
+Frente = 0
+Final = -1
+Tamanho = 0
+Contador = 0
+
+// ===== PROCEDIMENTOS =====
+
+// Procedimento para adicionar na fila
+PROCEDIMENTO enqueue(pedido: INTEIRO)
+INÍCIO
+    SE (Tamanho < MAX_TAM) ENTÃO
+        Final = (Final + 1) % MAX_TAM
+        Fila[Final] = pedido
+        Tamanho = Tamanho + 1
+    FIM SE
+FIM
+
+// Procedimento para remover da fila
+PROCEDIMENTO dequeue(): INTEIRO
+INÍCIO
+    SE (Tamanho > 0) ENTÃO
+        pedido = Fila[Frente]
+        Frente = (Frente + 1) % MAX_TAM
+        Tamanho = Tamanho - 1
+        RETORNAR pedido
+    FIM SE
+FIM
+
+// Procedimento para incrementar contador
+PROCEDIMENTO incrementarContador()
+INÍCIO
+    Contador = Contador + 1
+    ESCREVER "Pedidos em espera: ", Contador
+FIM
+
+// Procedimento para exibir fila
+PROCEDIMENTO exibirFila()
+INÍCIO
+    ESCREVER "Pedidos na Fila: "
+    PARA i DE 0 ATÉ (Tamanho-1) FAÇA
+        posicao = (Frente + i) % MAX_TAM
+        ESCREVER "Pedido", Fila[posicao]
+        SE (i < Tamanho-1) ENTÃO
+            ESCREVER ", "
+        FIM SE
+    FIM PARA
+FIM
+
+// Procedimento para exibir estado final
+PROCEDIMENTO exibirEstadoFinal()
+INÍCIO
+    ESCREVER "Estado Final:"
+    PARA i DE 0 ATÉ (Tamanho-1) FAÇA
+        posicao = (Frente + i) % MAX_TAM
+        ESCREVER "Pedido ", Fila[posicao]
+	 SE (i < Tamanho-1) ENTÃO
+            ESCREVER ", "
+        FIM SE
+    FIM PARA
+FIM
+
+
+PROCEDIMENTO mostrarPedidosEspera()
+INÍCIO
+    ESCREVER "Pedidos em espera: ", Tamanho
+FIM
+
+
+
+// ===== PROGRAMA PRINCIPAL =====
+
+INÍCIO
+    ESCREVER "=== DRIVE-THRU ==="
+    
+    // 1. Adicionar 5 pedidos na fila:
+    
+    enqueue(101)
+    enqueue(102)
+    enqueue(103)
+    enqueue(104)
+    enqueue(105)
+    
+    // 2. Exibir fila atual
+    exibirFila()
+    
+    // 3. Mostrar próximo pedido a ser preparado:
+    ESCREVER "Próximo a preparar: Pedido", Fila[Frente]
+    
+    // 4. Processar 2 pedidos(remover da fila) e mostrar quais foram processados:
+    ESCREVER ""
+    ESCREVER "=== Processando Pedidos ==="
+    PARA i DE 1 ATÉ 2 FAÇA
+        SE (Tamanho > 0) ENTÃO
+            pedido = dequeue()
+            ESCREVER "Processando pedido", pedido,"..."
+        SENÃO
+            ESCREVER "Não há mais pedidos a serem processados"
+        FIM SE
+    FIM PARA
+    
+    // 5. Adicionar um novo pedido na fila:
+   ESCREVER ""
+    enqueue(106)
+    ESCREVER "Novo pedido: Pedido 106 adicionado."
+    ESCREVER ""
+    
+    // 6. Mostrar estado final da fila e quantos pedidos restam:
+    exibirEstadoFinal()
+
+     mostrarPedidosEspera()
+FIM

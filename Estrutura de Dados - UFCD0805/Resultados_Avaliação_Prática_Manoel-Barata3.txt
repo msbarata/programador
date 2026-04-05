@@ -1,0 +1,110 @@
+EXERCÍCIO 3 - Pilha (25 valores)
+Enunciado:
+
+Implementar um sistema de histórico de navegação web (como o botão "voltar" do browser). O programa deve:
+
+
+
+/ ===== DECLARAÇÕES GLOBAIS =====
+
+// 1) Criar uma pilha vazia para o histórico (3 valores)
+   
+
+CONSTANTE MAX_HIST = 10
+pilha: ARRAY[0..MAX_HIST-1] DE TEXTO
+topo = -1 // PILHA VAZIA
+contador: INTEIRO
+
+
+// ===== PROCEDIMENTOS =====
+
+
+PROCEDIMENTO push(url: TEXTO)
+INÍCIO
+    SE (topo = MAX_HIST-1) ENTÃO
+        ESCREVER "Pilha cheia!"
+        RETORNAR
+    FIM SE
+    
+    topo = topo + 1
+    pilha[topo] = url
+    ESCREVER "Visitando: ", url
+FIM
+
+
+
+FUNÇÃO peek(): TEXTO
+INÍCIO
+    SE (topo = -1) ENTÃO
+        RETORNAR ""
+    SENÃO
+        RETORNAR pilha[topo]
+    FIM SE
+FIM
+
+
+FUNÇÃO pop(): TEXTO
+INÍCIO
+    SE (topo = -1) ENTÃO
+        ESCREVER "PILHA VAZIA!"
+        RETORNAR ""
+    FIM SE
+    
+    url = pilha[topo]
+    topo = topo - 1
+    RETORNAR url
+FIM
+
+
+FUNÇÃO tamanho(): INTEIRO
+INÍCIO
+    RETORNAR topo + 1
+FIM
+
+
+
+// ===== PROGRAMA PRINCIPAL =====
+
+INÍCIO
+    
+    ESCREVER "=== HISTÓRICO DE NAVEGAÇÃO ==="
+    
+    // 2) Visitar 5 páginas (adicionar à pilha): "google.com", "facebook.com", "youtube.com", "wikipedia.org", "github.com" (8 valores)
+
+    push("google.com")
+    push("facebook.com") 
+    push("youtube.com")
+    push("wikipedia.org")
+    push("github.com")
+    
+    // 3. Mostrar qual é a página atual (topo da pilha) (2 valores) 
+
+     ESCREVER ""
+	ESCREVER "Página atual: ", peek() // MOSTRA github.com
+    ESCREVER ""
+
+
+ // 4. Retornar 3 páginas no histórico de navegação (removendo e mostrando)
+
+        removido = pop()
+PARA contador de 1 até 2 FAÇA
+	removido = pop()
+        ESCREVER "Voltando para: ", removido	
+ 	FIM PARA
+        ESCREVER "Voltando para: facebook.com"
+
+  // Mostrar quantas páginas restam no histórico (3 valores)
+
+SE (peek() ≠ "") ENTÃO
+	    ESCREVER ""
+            ESCREVER "Página atual: ", peek()
+        SENÃO
+            ESCREVER "Histórico vazio!"
+        FIM SE
+        ESCREVER "Páginas no histórico: ", tamanho()
+        ESCREVER ""
+
+FIM
+
+
+
