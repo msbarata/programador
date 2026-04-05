@@ -1,0 +1,3 @@
+SELECT DESIG AS Distrito
+FROM distritos
+ORDER BY DESIG ASC;
